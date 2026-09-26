@@ -1,0 +1,484 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400" width="100%" height="100%">
+  <defs>
+    <!-- Paleta de Degradados Synthwave -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050816"/>
+      <stop offset="45%" stop-color="#12072b"/>
+      <stop offset="75%" stop-color="#2a0845"/>
+      <stop offset="100%" stop-color="#4c0559"/>
+    </linearGradient>
+
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#18042b"/>
+      <stop offset="30%" stop-color="#0e041e"/>
+      <stop offset="100%" stop-color="#050816"/>
+    </linearGradient>
+
+    <!-- Sol / Luna Synthwave con Degradado Magenta Neón -->
+    <linearGradient id="synthSunGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff00ff"/>
+      <stop offset="40%" stop-color="#f43f5e"/>
+      <stop offset="80%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#facc15"/>
+    </linearGradient>
+
+    <!-- Degradados Neón Texto y Elementos -->
+    <linearGradient id="neonTextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ffff"/>
+      <stop offset="50%" stop-color="#d946ef"/>
+      <stop offset="100%" stop-color="#ff00ff"/>
+    </linearGradient>
+
+    <linearGradient id="fujiGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1f1035"/>
+      <stop offset="100%" stop-color="#0d041a"/>
+    </linearGradient>
+
+    <linearGradient id="snowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#e0e7ff"/>
+      <stop offset="100%" stop-color="#a5b4fc"/>
+    </linearGradient>
+
+    <linearGradient id="panelBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050816" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#120826" stop-opacity="0.88"/>
+    </linearGradient>
+
+    <!-- Filtros Glow Neón Compatibles -->
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur1"/>
+      <feGaussianBlur stdDeviation="8" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glow-magenta" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="4" result="blur1"/>
+      <feGaussianBlur stdDeviation="10" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Máscara de Rayas para la Luna Synthwave -->
+    <mask id="sunStripesMask">
+      <rect x="0" y="0" width="1600" height="400" fill="#ffffff"/>
+      <rect x="700" y="145" width="400" height="3" fill="#000000"/>
+      <rect x="700" y="156" width="400" height="4.5" fill="#000000"/>
+      <rect x="700" y="169" width="400" height="6.5" fill="#000000"/>
+      <rect x="700" y="184" width="400" height="9" fill="#000000"/>
+      <rect x="700" y="201" width="400" height="12" fill="#000000"/>
+      <rect x="700" y="221" width="400" height="16" fill="#000000"/>
+      <rect x="700" y="245" width="400" height="20" fill="#000000"/>
+    </mask>
+
+    <!-- Flor Sakura Reutilizable -->
+    <g id="sakura-flower">
+      <ellipse cx="0" cy="-7" rx="3.5" ry="5.5" fill="#ff77a8"/>
+      <ellipse cx="6.5" cy="-2" rx="3.5" ry="5.5" transform="rotate(72 6.5 -2)" fill="#ff8dc7"/>
+      <ellipse cx="4" cy="6" rx="3.5" ry="5.5" transform="rotate(144 4 6)" fill="#ffa3d7"/>
+      <ellipse cx="-4" cy="6" rx="3.5" ry="5.5" transform="rotate(216 -4 6)" fill="#ff8dc7"/>
+      <ellipse cx="-6.5" cy="-2" rx="3.5" ry="5.5" transform="rotate(288 -6.5 -2)" fill="#ff77a8"/>
+      <circle cx="0" cy="0" r="2.5" fill="#fef08a"/>
+      <circle cx="0" cy="0" r="1.2" fill="#ff0055"/>
+    </g>
+
+    <!-- Pétalo Individual -->
+    <path id="single-petal" d="M0,0 C-3,-6 3,-10 0,-16 C-3,-10 3,-6 0,0 Z" fill="#ff99c8"/>
+  </defs>
+
+  <style>
+    /* Tipografías y Textos */
+    .terminal-sub { font-family: 'Fira Code', 'Courier New', Consolas, monospace; font-weight: 700; font-size: 13px; fill: #00ffff; letter-spacing: 2.5px; }
+    .title-name { font-family: 'Impact', 'Segoe UI', -apple-system, sans-serif; font-weight: 900; font-size: 50px; fill: url(#neonTextGrad); letter-spacing: 2px; }
+    .subtitle-role { font-family: 'Fira Code', 'Courier New', Consolas, monospace; font-weight: 700; font-size: 20px; fill: #00ffff; letter-spacing: 1.5px; }
+    .bio-line1 { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 600; font-size: 15px; fill: #f1f5f9; letter-spacing: 0.5px; }
+    .bio-line2 { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 500; font-size: 13.5px; fill: #cbd5e1; letter-spacing: 0.3px; }
+    .badge-label { font-family: 'Fira Code', monospace; font-weight: 700; font-size: 11px; letter-spacing: 0.5px; }
+
+    /* Animación: Parpadeo de Cursor */
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    .cursor-blink { animation: blink 0.9s infinite; }
+
+    /* Animación: Pulsación Glow Neón */
+    @keyframes neonPulse {
+      0%, 100% { filter: drop-shadow(0 0 4px #00ffff) drop-shadow(0 0 10px #ff00ff); opacity: 0.95; }
+      50% { filter: drop-shadow(0 0 8px #00ffff) drop-shadow(0 0 18px #ff00ff); opacity: 1; }
+    }
+    .pulsing-glow { animation: neonPulse 3s ease-in-out infinite; }
+
+    @keyframes sunGlow {
+      0%, 100% { filter: drop-shadow(0 0 12px #ff00ff) drop-shadow(0 0 25px #d946ef); }
+      50% { filter: drop-shadow(0 0 22px #ff00ff) drop-shadow(0 0 45px #f43f5e); }
+    }
+    .sun-animated { animation: sunGlow 4s ease-in-out infinite; }
+
+    /* Animación: Estrellas Parpadeando */
+    @keyframes starTwinkle1 { 0%, 100% { opacity: 0.2; transform: scale(0.8); } 50% { opacity: 1; transform: scale(1.3); } }
+    @keyframes starTwinkle2 { 0%, 100% { opacity: 0.9; } 50% { opacity: 0.15; } }
+    @keyframes starTwinkle3 { 0%, 100% { opacity: 0.3; } 30% { opacity: 1; } 70% { opacity: 0.4; } }
+    
+    .twinkle-1 { animation: starTwinkle1 2.2s infinite ease-in-out; }
+    .twinkle-2 { animation: starTwinkle2 3.1s infinite ease-in-out; }
+    .twinkle-3 { animation: starTwinkle3 1.8s infinite ease-in-out; }
+
+    /* Animación: Pétalos de Sakura Cayendo */
+    @keyframes petalFall1 {
+      0% { transform: translate(0px, -20px) rotate(0deg); opacity: 0; }
+      10% { opacity: 0.9; }
+      90% { opacity: 0.8; }
+      100% { transform: translate(180px, 420px) rotate(380deg); opacity: 0; }
+    }
+    @keyframes petalFall2 {
+      0% { transform: translate(0px, -15px) rotate(45deg); opacity: 0; }
+      15% { opacity: 0.95; }
+      85% { opacity: 0.85; }
+      100% { transform: translate(-140px, 420px) rotate(-320deg); opacity: 0; }
+    }
+    @keyframes petalFall3 {
+      0% { transform: translate(0px, -25px) rotate(10deg); opacity: 0; }
+      12% { opacity: 1; }
+      88% { opacity: 0.7; }
+      100% { transform: translate(110px, 420px) rotate(420deg); opacity: 0; }
+    }
+    @keyframes waterRipple {
+      0%, 100% { opacity: 0.35; transform: scaleX(1); }
+      50% { opacity: 0.8; transform: scaleX(1.03); }
+    }
+    .ripple { animation: waterRipple 3s infinite ease-in-out; }
+
+    .falling-petal-1 { animation: petalFall1 7s linear infinite; }
+    .falling-petal-2 { animation: petalFall2 9s linear infinite; }
+    .falling-petal-3 { animation: petalFall3 8s linear infinite; }
+    .falling-petal-4 { animation: petalFall1 6.5s linear infinite; }
+    .falling-petal-5 { animation: petalFall2 10.5s linear infinite; }
+    .falling-petal-6 { animation: petalFall3 7.8s linear infinite; }
+  </style>
+
+  <!-- ================= 1. CIELO NOCTURNO Y FONDO ================= -->
+  <rect x="0" y="0" width="1600" height="270" fill="url(#skyGrad)"/>
+
+  <!-- Estrellas Pixel Art y Synthwave -->
+  <g id="stars-field">
+    <rect x="120" y="30" width="2" height="2" fill="#00ffff" class="twinkle-1"/>
+    <rect x="180" y="75" width="3" height="3" fill="#ffffff" class="twinkle-2"/>
+    <rect x="290" y="40" width="2" height="2" fill="#ff77a8" class="twinkle-3"/>
+    <rect x="420" y="25" width="2.5" height="2.5" fill="#00ffff" class="twinkle-1"/>
+    <rect x="540" y="65" width="2" height="2" fill="#ffffff" class="twinkle-2"/>
+    <rect x="680" y="35" width="3" height="3" fill="#a855f7" class="twinkle-3"/>
+    <rect x="790" y="20" width="2" height="2" fill="#00ffff" class="twinkle-1"/>
+    <rect x="850" y="85" width="2.5" height="2.5" fill="#ffffff" class="twinkle-2"/>
+    <rect x="940" y="30" width="3" height="3" fill="#ff00ff" class="twinkle-3"/>
+    <rect x="1080" y="55" width="2" height="2" fill="#00ffff" class="twinkle-1"/>
+    <rect x="1190" y="25" width="3" height="3" fill="#ffffff" class="twinkle-2"/>
+    <rect x="1260" y="70" width="2" height="2" fill="#facc15" class="twinkle-3"/>
+    <rect x="1340" y="40" width="2.5" height="2.5" fill="#00ffff" class="twinkle-1"/>
+    <rect x="1420" y="80" width="3" height="3" fill="#ff00ff" class="twinkle-2"/>
+    <rect x="1510" y="35" width="2" height="2" fill="#ffffff" class="twinkle-3"/>
+    <rect x="1560" y="90" width="2" height="2" fill="#00ffff" class="twinkle-1"/>
+    
+    <g transform="translate(630, 80)" class="twinkle-1">
+      <rect x="2" y="0" width="2" height="6" fill="#00ffff"/>
+      <rect x="0" y="2" width="6" height="2" fill="#00ffff"/>
+    </g>
+    <g transform="translate(1120, 45)" class="twinkle-2">
+      <rect x="2" y="0" width="2" height="6" fill="#ff00ff"/>
+      <rect x="0" y="2" width="6" height="2" fill="#ff00ff"/>
+    </g>
+    <g transform="translate(1390, 30)" class="twinkle-3">
+      <rect x="2" y="0" width="2" height="6" fill="#ffffff"/>
+      <rect x="0" y="2" width="6" height="2" fill="#ffffff"/>
+    </g>
+  </g>
+
+  <!-- ================= 2. SOL / LUNA SYNTHWAVE ================= -->
+  <g class="sun-animated">
+    <circle cx="980" cy="175" r="105" fill="url(#synthSunGrad)" mask="url(#sunStripesMask)"/>
+    <circle cx="980" cy="175" r="108" fill="none" stroke="#ff00ff" stroke-width="1.5" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- ================= 3. MONTE FUJI (PIXEL ART) ================= -->
+  <g id="mount-fuji">
+    <polygon points="810,270 915,120 1045,120 1150,270" fill="url(#fujiGrad)"/>
+    <polygon points="915,120 1045,120 1060,150 1040,165 1015,145 985,170 960,150 930,165 910,145 900,150" fill="url(#snowGrad)"/>
+    <polygon points="980,120 1045,120 1060,150 1040,165 1015,145 990,170" fill="#c7d2fe" fill-opacity="0.6"/>
+    <line x1="810" y1="270" x2="915" y2="120" stroke="#ff00ff" stroke-width="1.5" stroke-opacity="0.5"/>
+    <line x1="1150" y1="270" x2="1045" y2="120" stroke="#00ffff" stroke-width="1.5" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- ================= 4. PAGODA JAPONESA EN SEGUNDO PLANO ================= -->
+  <g id="pagoda" fill="#130826" stroke="#a855f7" stroke-width="1">
+    <rect x="745" y="240" width="40" height="30" fill="#0d041a"/>
+    <path d="M725,240 C745,236 785,236 805,240 L795,232 L735,232 Z" fill="#1f0a38"/>
+    <rect x="750" y="218" width="30" height="14" fill="#0d041a"/>
+    <rect x="762" y="222" width="6" height="10" fill="#facc15" stroke="none"/>
+    <path d="M732,218 C750,214 780,214 798,218 L790,211 L740,211 Z" fill="#1f0a38"/>
+    <rect x="754" y="198" width="22" height="13" fill="#0d041a"/>
+    <rect x="763" y="201" width="5" height="8" fill="#facc15" stroke="none"/>
+    <path d="M738,198 C752,194 776,194 792,198 L785,192 L745,192 Z" fill="#1f0a38"/>
+    <line x1="765" y1="192" x2="765" y2="170" stroke="#00ffff" stroke-width="2"/>
+    <circle cx="765" cy="168" r="2.5" fill="#ff00ff" stroke="none"/>
+  </g>
+
+  <!-- ================= 5. CIUDAD FUTURISTA CYBERPUNK ================= -->
+  <g id="cyber-skyline">
+    <rect x="1140" y="170" width="36" height="100" fill="#0c0418" stroke="#ff00ff" stroke-width="0.8"/>
+    <rect x="1146" y="180" width="4" height="6" fill="#00ffff"/>
+    <rect x="1160" y="180" width="4" height="6" fill="#00ffff"/>
+    <rect x="1146" y="200" width="4" height="6" fill="#ff00ff"/>
+    <rect x="1160" y="200" width="4" height="6" fill="#facc15"/>
+    <rect x="1146" y="220" width="4" height="6" fill="#00ffff"/>
+    <rect x="1160" y="240" width="4" height="6" fill="#00ffff"/>
+
+    <rect x="1185" y="145" width="44" height="125" fill="#080214" stroke="#00ffff" stroke-width="0.8"/>
+    <line x1="1207" y1="145" x2="1207" y2="120" stroke="#00ffff" stroke-width="1.5"/>
+    <circle cx="1207" cy="118" r="2" fill="#ff00ff"/>
+    <rect x="1193" y="155" width="3" height="4" fill="#00ffff"/>
+    <rect x="1202" y="155" width="3" height="4" fill="#00ffff"/>
+    <rect x="1211" y="155" width="3" height="4" fill="#ff00ff"/>
+    <rect x="1220" y="155" width="3" height="4" fill="#00ffff"/>
+    <rect x="1193" y="175" width="3" height="4" fill="#facc15"/>
+    <rect x="1211" y="175" width="3" height="4" fill="#00ffff"/>
+    <rect x="1193" y="195" width="3" height="4" fill="#00ffff"/>
+    <rect x="1220" y="195" width="3" height="4" fill="#ff00ff"/>
+
+    <rect x="1235" y="190" width="30" height="80" fill="#0d041a" stroke="#a855f7" stroke-width="0.8"/>
+    <rect x="1272" y="160" width="48" height="110" fill="#080212" stroke="#ff00ff" stroke-width="0.8"/>
+    <line x1="1296" y1="160" x2="1296" y2="135" stroke="#ff00ff" stroke-width="1.5"/>
+    <circle cx="1296" cy="133" r="2.5" fill="#00ffff" class="twinkle-1"/>
+
+    <rect x="1440" y="180" width="35" height="90" fill="#0d041a" stroke="#00ffff" stroke-width="0.8"/>
+    <rect x="1480" y="150" width="42" height="120" fill="#090214" stroke="#a855f7" stroke-width="0.8"/>
+    <line x1="1501" y1="150" x2="1501" y2="125" stroke="#a855f7" stroke-width="1.5"/>
+    <rect x="1530" y="195" width="50" height="75" fill="#0d041a" stroke="#ff00ff" stroke-width="0.8"/>
+  </g>
+
+  <!-- ================= 6. TORII JAPONÉS ILUMINADO ================= -->
+  <g id="torii-gate" filter="url(#glow-magenta)">
+    <path d="M1320,150 C1360,140 1420,140 1460,150 L1464,158 C1420,150 1360,150 1316,158 Z" fill="#ff0077"/>
+    <rect x="1326" y="170" width="128" height="8" rx="2" fill="#ff0077"/>
+    <rect x="1386" y="153" width="8" height="17" fill="#00ffff"/>
+    <rect x="1342" y="170" width="10" height="105" fill="#ff0055"/>
+    <rect x="1428" y="170" width="10" height="105" fill="#ff0055"/>
+    <rect x="1339" y="270" width="16" height="8" rx="2" fill="#00ffff"/>
+    <rect x="1425" y="270" width="16" height="8" rx="2" fill="#00ffff"/>
+    <line x1="1347" y1="178" x2="1347" y2="270" stroke="#00ffff" stroke-width="1.5"/>
+    <line x1="1433" y1="178" x2="1433" y2="270" stroke="#00ffff" stroke-width="1.5"/>
+  </g>
+
+  <!-- ================= 7. AGUA SYNTHWAVE Y REFLEJOS ================= -->
+  <rect x="0" y="270" width="1600" height="130" fill="url(#waterGrad)"/>
+  <line x1="0" y1="270" x2="1600" y2="270" stroke="#00ffff" stroke-width="1.5" stroke-opacity="0.8"/>
+
+  <g stroke="#ff00ff" stroke-opacity="0.4" stroke-width="1.2">
+    <line x1="0" y1="275" x2="1600" y2="275" class="ripple"/>
+    <line x1="0" y1="283" x2="1600" y2="283" stroke="#00ffff" stroke-opacity="0.5"/>
+    <line x1="0" y1="294" x2="1600" y2="294" stroke="#ff00ff" stroke-opacity="0.45" class="ripple"/>
+    <line x1="0" y1="308" x2="1600" y2="308" stroke="#00ffff" stroke-opacity="0.4"/>
+    <line x1="0" y1="326" x2="1600" y2="326" stroke="#ff00ff" stroke-opacity="0.5"/>
+    <line x1="0" y1="348" x2="1600" y2="348" stroke="#00ffff" stroke-opacity="0.35"/>
+    <line x1="0" y1="374" x2="1600" y2="374" stroke="#ff00ff" stroke-opacity="0.3"/>
+  </g>
+
+  <g class="ripple">
+    <rect x="940" y="273" width="80" height="2" fill="#ff00ff" fill-opacity="0.8"/>
+    <rect x="930" y="280" width="100" height="2.5" fill="#f43f5e" fill-opacity="0.7"/>
+    <rect x="915" y="290" width="130" height="3" fill="#fb923c" fill-opacity="0.6"/>
+    <rect x="900" y="303" width="160" height="3.5" fill="#facc15" fill-opacity="0.5"/>
+    <rect x="880" y="320" width="200" height="4" fill="#ff00ff" fill-opacity="0.4"/>
+    <rect x="860" y="342" width="240" height="5" fill="#d946ef" fill-opacity="0.3"/>
+    
+    <rect x="1340" y="278" width="14" height="2" fill="#00ffff"/>
+    <rect x="1426" y="278" width="14" height="2" fill="#00ffff"/>
+    <rect x="1336" y="288" width="22" height="2.5" fill="#ff0077" fill-opacity="0.7"/>
+    <rect x="1422" y="288" width="22" height="2.5" fill="#ff0077" fill-opacity="0.7"/>
+    <rect x="1330" y="302" width="35" height="3" fill="#ff0077" fill-opacity="0.5"/>
+    <rect x="1415" y="302" width="35" height="3" fill="#ff0077" fill-opacity="0.5"/>
+  </g>
+
+  <!-- ================= 8. RAMAS DE SAKURA (CEREZO) ================= -->
+  <!-- Esquina Superior Izquierda -->
+  <g id="sakura-left">
+    <path d="M-10,-10 Q80,20 160,15 T260,65 T330,40" fill="none" stroke="#261019" stroke-width="7" stroke-linecap="round"/>
+    <path d="M110,18 Q140,55 190,75" fill="none" stroke="#261019" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M190,45 Q220,95 260,105" fill="none" stroke="#261019" stroke-width="3" stroke-linecap="round"/>
+    <path d="M40,5 Q70,70 110,85" fill="none" stroke="#261019" stroke-width="3.5" stroke-linecap="round"/>
+
+    <use href="#sakura-flower" x="70" y="20"/>
+    <use href="#sakura-flower" x="110" y="45" transform="scale(1.2)"/>
+    <use href="#sakura-flower" x="145" y="18" transform="scale(0.9)"/>
+    <use href="#sakura-flower" x="180" y="65"/>
+    <use href="#sakura-flower" x="225" y="45" transform="scale(1.1)"/>
+    <use href="#sakura-flower" x="260" y="70"/>
+    <use href="#sakura-flower" x="280" y="105" transform="scale(0.85)"/>
+    <use href="#sakura-flower" x="325" y="42" transform="scale(1.15)"/>
+    <use href="#sakura-flower" x="100" y="85" transform="scale(0.9)"/>
+  </g>
+
+  <!-- Esquina Superior Derecha -->
+  <g id="sakura-right">
+    <path d="M1610,-10 Q1520,30 1440,20 T1320,60 T1240,35" fill="none" stroke="#261019" stroke-width="7" stroke-linecap="round"/>
+    <path d="M1490,25 Q1450,65 1400,85" fill="none" stroke="#261019" stroke-width="4" stroke-linecap="round"/>
+    <path d="M1360,45 Q1330,95 1280,110" fill="none" stroke="#261019" stroke-width="3" stroke-linecap="round"/>
+    
+    <use href="#sakura-flower" x="1540" y="20"/>
+    <use href="#sakura-flower" x="1480" y="45" transform="scale(1.1)"/>
+    <use href="#sakura-flower" x="1435" y="22" transform="scale(0.9)"/>
+    <use href="#sakura-flower" x="1395" y="75"/>
+    <use href="#sakura-flower" x="1335" y="55" transform="scale(1.2)"/>
+    <use href="#sakura-flower" x="1290" y="85" transform="scale(0.85)"/>
+    <use href="#sakura-flower" x="1245" y="38" transform="scale(1.1)"/>
+    <use href="#sakura-flower" x="1275" y="112"/>
+  </g>
+
+  <!-- ================= 9. PÉTALOS DE SAKURA CAYENDO (ANIMADOS) ================= -->
+  <g id="falling-petals">
+    <g class="falling-petal-1" style="transform-origin: 200px 20px;">
+      <use href="#single-petal" x="200" y="20"/>
+    </g>
+    <g class="falling-petal-2" style="transform-origin: 320px 40px; animation-delay: 1.5s;">
+      <use href="#single-petal" x="320" y="40"/>
+    </g>
+    <g class="falling-petal-3" style="transform-origin: 150px 70px; animation-delay: 3s;">
+      <use href="#single-petal" x="150" y="70"/>
+    </g>
+    <g class="falling-petal-4" style="transform-origin: 650px 10px; animation-delay: 0.8s;">
+      <use href="#single-petal" x="650" y="10"/>
+    </g>
+    <g class="falling-petal-5" style="transform-origin: 850px 30px; animation-delay: 2.2s;">
+      <use href="#single-petal" x="850" y="30"/>
+    </g>
+    <g class="falling-petal-6" style="transform-origin: 1100px 15px; animation-delay: 4.1s;">
+      <use href="#single-petal" x="1100" y="15"/>
+    </g>
+    <g class="falling-petal-1" style="transform-origin: 1350px 50px; animation-delay: 2.7s;">
+      <use href="#single-petal" x="1350" y="50"/>
+    </g>
+    <g class="falling-petal-2" style="transform-origin: 1450px 30px; animation-delay: 0.4s;">
+      <use href="#single-petal" x="1450" y="30"/>
+    </g>
+    <g class="falling-petal-3" style="transform-origin: 1250px 60px; animation-delay: 3.8s;">
+      <use href="#single-petal" x="1250" y="60"/>
+    </g>
+    <g class="falling-petal-4" style="transform-origin: 480px 25px; animation-delay: 5s;">
+      <use href="#single-petal" x="480" y="25"/>
+    </g>
+  </g>
+
+  <!-- ================= 10. PANEL HUD CYBERPUNK Y CONTENIDO ================= -->
+  <g transform="translate(60, 35)">
+    <!-- Marco y Fondo del Panel -->
+    <path d="M 15 0 
+             L 655 0 
+             L 675 20 
+             L 675 320 
+             L 655 335 
+             L 20 335 
+             L 0 315 
+             L 0 15 Z" 
+          fill="url(#panelBg)" 
+          stroke="#00ffff" 
+          stroke-width="1.8" 
+          stroke-opacity="0.8" 
+          filter="url(#glow-cyan)"/>
+
+    <!-- Acentos de Esquinas Cyberpunk -->
+    <path d="M 0 35 L 0 15 L 15 0 L 35 0" fill="none" stroke="#ff00ff" stroke-width="3"/>
+    <path d="M 640 0 L 655 0 L 675 20 L 675 40" fill="none" stroke="#ff00ff" stroke-width="3"/>
+    <path d="M 675 295 L 675 320 L 655 335 L 635 335" fill="none" stroke="#00ffff" stroke-width="3"/>
+    <path d="M 40 335 L 20 335 L 0 315 L 0 295" fill="none" stroke="#00ffff" stroke-width="3"/>
+
+    <line x1="25" y1="48" x2="650" y2="48" stroke="#334155" stroke-opacity="0.4" stroke-dasharray="4 4"/>
+
+    <!-- LÍNEA 1: Terminal Status Header -->
+    <g transform="translate(30, 32)">
+      <circle cx="6" cy="6" r="4.5" fill="#10b981" class="twinkle-1"/>
+      <circle cx="6" cy="6" r="7" fill="none" stroke="#10b981" stroke-width="1" stroke-opacity="0.6"/>
+      <text x="24" y="10" class="terminal-sub">SYSTEM ONLINE // READY TO DEPLOY</text>
+    </g>
+
+    <!-- LÍNEA 2: Nombre de Impacto -->
+    <text x="30" y="102" class="title-name pulsing-glow">Giovanny Peñaloza</text>
+
+    <!-- LÍNEA 3: Subtítulo con Cursor Parpadeante -->
+    <g transform="translate(30, 140)">
+      <text x="0" y="0" class="subtitle-role">&gt; FULL STACK DEVELOPER<tspan class="cursor-blink" fill="#ff00ff">_</tspan></text>
+    </g>
+
+    <!-- LÍNEA 4: Descripción Profesional -->
+    <text x="30" y="174" class="bio-line1">Tecnólogo en Desarrollo de Software</text>
+    <text x="30" y="198" class="bio-line2">Arquitectura Empresarial &amp; Soluciones Escalables</text>
+
+    <line x1="30" y1="216" x2="645" y2="216" stroke="url(#neonTextGrad)" stroke-width="1.2" stroke-opacity="0.6"/>
+
+    <!-- ================= 11. BADGES NEÓN DE TECNOLOGÍAS ================= -->
+    <g transform="translate(30, 235)">
+      <!-- FastAPI -->
+      <g transform="translate(0, 0)">
+        <rect width="80" height="26" rx="4" fill="#071b26" stroke="#00ffff" stroke-width="1.2"/>
+        <circle cx="11" cy="13" r="3.5" fill="#00ffff"/>
+        <text x="22" y="17" class="badge-label" fill="#00ffff">FastAPI</text>
+      </g>
+
+      <!-- Vue 3 -->
+      <g transform="translate(88, 0)">
+        <rect width="70" height="26" rx="4" fill="#06231d" stroke="#10b981" stroke-width="1.2"/>
+        <circle cx="11" cy="13" r="3.5" fill="#10b981"/>
+        <text x="22" y="17" class="badge-label" fill="#34d399">Vue 3</text>
+      </g>
+
+      <!-- PrimeVue -->
+      <g transform="translate(166, 0)">
+        <rect width="88" height="26" rx="4" fill="#06231d" stroke="#2dd4bf" stroke-width="1.2"/>
+        <circle cx="11" cy="13" r="3.5" fill="#2dd4bf"/>
+        <text x="22" y="17" class="badge-label" fill="#2dd4bf">PrimeVue</text>
+      </g>
+
+      <!-- SQLAlchemy -->
+      <g transform="translate(262, 0)">
+        <rect width="105" height="26" rx="4" fill="#260d19" stroke="#f43f5e" stroke-width="1.2"/>
+        <circle cx="11" cy="13" r="3.5" fill="#f43f5e"/>
+        <text x="22" y="17" class="badge-label" fill="#fb7185">SQLAlchemy</text>
+      </g>
+
+      <!-- MariaDB -->
+      <g transform="translate(375, 0)">
+        <rect width="84" height="26" rx="4" fill="#241304" stroke="#f59e0b" stroke-width="1.2"/>
+        <circle cx="11" cy="13" r="3.5" fill="#f59e0b"/>
+        <text x="22" y="17" class="badge-label" fill="#fbbf24">MariaDB</text>
+      </g>
+
+      <!-- MySQL -->
+      <g transform="translate(467, 0)">
+        <rect width="72" height="26" rx="4" fill="#0a192f" stroke="#38bdf8" stroke-width="1.2"/>
+        <circle cx="11" cy="13" r="3.5" fill="#38bdf8"/>
+        <text x="22" y="17" class="badge-label" fill="#38bdf8">MySQL</text>
+      </g>
+
+      <!-- Docker -->
+      <g transform="translate(547, 0)">
+        <rect width="75" height="26" rx="4" fill="#08182b" stroke="#0ea5e9" stroke-width="1.2"/>
+        <circle cx="11" cy="13" r="3.5" fill="#0ea5e9"/>
+        <text x="22" y="17" class="badge-label" fill="#38bdf8">Docker</text>
+      </g>
+    </g>
+
+    <g transform="translate(30, 280)">
+      <text x="0" y="12" font-family="'Fira Code', monospace" font-size="10" fill="#94a3b8" letter-spacing="1">
+        STACK: <tspan fill="#00ffff">ASYNC_BACKEND</tspan> // <tspan fill="#ff00ff">REACTIVE_UI</tspan> // <tspan fill="#facc15">MULTI_DATABASE</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- Borde Neón Perimetral -->
+  <rect x="1" y="1" width="1598" height="398" fill="none" stroke="#ff00ff" stroke-width="1.5" stroke-opacity="0.3"/>
+</svg>
