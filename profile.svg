@@ -109,7 +109,8 @@
   </defs>
 
   <style>
-    /* Tipografías Retro Pixel & Display */
+    <![CDATA[
+    /* Tipografias Retro Pixel y Display */
     .title-pixel { 
       font-family: 'Courier New', 'Lucida Console', 'Press Start 2P', monospace; 
       font-weight: 900; 
@@ -167,7 +168,7 @@
     .star-2 { animation: twinkle 3.2s infinite ease-in-out; }
     .star-3 { animation: twinkle 1.8s infinite ease-in-out; }
 
-    /* Caída Continua de Pétalos Sakura */
+    /* Caida Continua de Petalos Sakura */
     @keyframes fallDiag1 {
       0% { transform: translate(0px, -20px) rotate(0deg); opacity: 0; }
       10% { opacity: 0.95; }
@@ -199,6 +200,7 @@
       50% { opacity: 0.85; transform: scaleX(1.025); }
     }
     .water-line { animation: waterShimmer 3s ease-in-out infinite; }
+    ]]>
   </style>
 
   <!-- ================= 1. CIELO NOCTURNO Y FONDO ================= -->
