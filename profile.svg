@@ -1,54 +1,60 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400" width="100%" height="100%">
   <defs>
-    <!-- Paleta de Degradados Synthwave -->
+    <!-- ================= DEGRADADOS DE FONDO & ATMÓSFERA ================= -->
     <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#050816"/>
-      <stop offset="45%" stop-color="#12072b"/>
-      <stop offset="75%" stop-color="#2a0845"/>
-      <stop offset="100%" stop-color="#4c0559"/>
+      <stop offset="0%" stop-color="#04020e"/>
+      <stop offset="35%" stop-color="#0c0728"/>
+      <stop offset="65%" stop-color="#1d073f"/>
+      <stop offset="85%" stop-color="#3b0859"/>
+      <stop offset="100%" stop-color="#5a0968"/>
     </linearGradient>
 
     <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#18042b"/>
-      <stop offset="30%" stop-color="#0e041e"/>
-      <stop offset="100%" stop-color="#050816"/>
+      <stop offset="0%" stop-color="#1a042e"/>
+      <stop offset="25%" stop-color="#110322"/>
+      <stop offset="60%" stop-color="#0a0218"/>
+      <stop offset="100%" stop-color="#03010a"/>
     </linearGradient>
 
-    <!-- Sol / Luna Synthwave con Degradado Magenta Neón -->
-    <linearGradient id="synthSunGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ff00ff"/>
-      <stop offset="40%" stop-color="#f43f5e"/>
-      <stop offset="80%" stop-color="#fb923c"/>
-      <stop offset="100%" stop-color="#facc15"/>
-    </linearGradient>
-
-    <!-- Degradados Neón Texto y Elementos -->
-    <linearGradient id="neonTextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00ffff"/>
-      <stop offset="50%" stop-color="#d946ef"/>
-      <stop offset="100%" stop-color="#ff00ff"/>
-    </linearGradient>
-
-    <linearGradient id="fujiGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1f1035"/>
-      <stop offset="100%" stop-color="#0d041a"/>
-    </linearGradient>
-
-    <linearGradient id="snowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+    <!-- Luna Synthwave Rosa / Magenta -->
+    <linearGradient id="moonGrad" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="60%" stop-color="#e0e7ff"/>
-      <stop offset="100%" stop-color="#a5b4fc"/>
+      <stop offset="20%" stop-color="#ffb3ea"/>
+      <stop offset="55%" stop-color="#ff1493"/>
+      <stop offset="85%" stop-color="#c026d3"/>
+      <stop offset="100%" stop-color="#9333ea"/>
     </linearGradient>
 
-    <linearGradient id="panelBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#050816" stop-opacity="0.92"/>
-      <stop offset="100%" stop-color="#120826" stop-opacity="0.88"/>
+    <!-- Monte Fuji Gradientes -->
+    <linearGradient id="fujiDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2d1354"/>
+      <stop offset="40%" stop-color="#180a36"/>
+      <stop offset="100%" stop-color="#09031c"/>
     </linearGradient>
 
-    <!-- Filtros Glow Neón Compatibles -->
+    <linearGradient id="fujiSnow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="30%" stop-color="#f5d0fe"/>
+      <stop offset="70%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#381559"/>
+    </linearGradient>
+
+    <!-- Máscara de Rayas Horizontales para la Luna Synthwave -->
+    <mask id="moonStripes">
+      <rect x="0" y="0" width="1600" height="400" fill="#ffffff"/>
+      <rect x="1100" y="102" width="300" height="2.5" fill="#000000"/>
+      <rect x="1100" y="111" width="300" height="3.5" fill="#000000"/>
+      <rect x="1100" y="122" width="300" height="5" fill="#000000"/>
+      <rect x="1100" y="135" width="300" height="7" fill="#000000"/>
+      <rect x="1100" y="150" width="300" height="9.5" fill="#000000"/>
+      <rect x="1100" y="168" width="300" height="12.5" fill="#000000"/>
+      <rect x="1100" y="189" width="300" height="16" fill="#000000"/>
+    </mask>
+
+    <!-- ================= FILTROS GLOW NEÓN ================= -->
     <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur1"/>
-      <feGaussianBlur stdDeviation="8" result="blur2"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur1"/>
+      <feGaussianBlur stdDeviation="6" result="blur2"/>
       <feMerge>
         <feMergeNode in="blur2"/>
         <feMergeNode in="blur1"/>
@@ -57,428 +63,558 @@
     </filter>
 
     <filter id="glow-magenta" x="-25%" y="-25%" width="150%" height="150%">
-      <feGaussianBlur stdDeviation="4" result="blur1"/>
-      <feGaussianBlur stdDeviation="10" result="blur2"/>
+      <feGaussianBlur stdDeviation="3.5" result="blur1"/>
+      <feGaussianBlur stdDeviation="9" result="blur2"/>
+      <feGaussianBlur stdDeviation="18" result="blur3"/>
       <feMerge>
+        <feMergeNode in="blur3"/>
         <feMergeNode in="blur2"/>
         <feMergeNode in="blur1"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <!-- Máscara de Rayas para la Luna Synthwave -->
-    <mask id="sunStripesMask">
-      <rect x="0" y="0" width="1600" height="400" fill="#ffffff"/>
-      <rect x="700" y="145" width="400" height="3" fill="#000000"/>
-      <rect x="700" y="156" width="400" height="4.5" fill="#000000"/>
-      <rect x="700" y="169" width="400" height="6.5" fill="#000000"/>
-      <rect x="700" y="184" width="400" height="9" fill="#000000"/>
-      <rect x="700" y="201" width="400" height="12" fill="#000000"/>
-      <rect x="700" y="221" width="400" height="16" fill="#000000"/>
-      <rect x="700" y="245" width="400" height="20" fill="#000000"/>
-    </mask>
+    <filter id="glow-soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
 
-    <!-- Flor Sakura Reutilizable -->
-    <g id="sakura-flower">
-      <ellipse cx="0" cy="-7" rx="3.5" ry="5.5" fill="#ff77a8"/>
-      <ellipse cx="6.5" cy="-2" rx="3.5" ry="5.5" transform="rotate(72 6.5 -2)" fill="#ff8dc7"/>
-      <ellipse cx="4" cy="6" rx="3.5" ry="5.5" transform="rotate(144 4 6)" fill="#ffa3d7"/>
-      <ellipse cx="-4" cy="6" rx="3.5" ry="5.5" transform="rotate(216 -4 6)" fill="#ff8dc7"/>
-      <ellipse cx="-6.5" cy="-2" rx="3.5" ry="5.5" transform="rotate(288 -6.5 -2)" fill="#ff77a8"/>
-      <circle cx="0" cy="0" r="2.5" fill="#fef08a"/>
-      <circle cx="0" cy="0" r="1.2" fill="#ff0055"/>
+    <!-- ================= SAKURA FLOWER PRESETS ================= -->
+    <g id="flower-full">
+      <!-- 5 Pétalos con degradado rosa neón a blanco -->
+      <path d="M0,0 C-5,-10 5,-10 0,-18 C-5,-10 5,-10 0,0" fill="#ff77bb" stroke="#ffe4f2" stroke-width="0.6"/>
+      <path d="M0,0 C-5,-10 5,-10 0,-18 C-5,-10 5,-10 0,0" transform="rotate(72)" fill="#ff69b4" stroke="#ffe4f2" stroke-width="0.6"/>
+      <path d="M0,0 C-5,-10 5,-10 0,-18 C-5,-10 5,-10 0,0" transform="rotate(144)" fill="#ff8dc7" stroke="#ffe4f2" stroke-width="0.6"/>
+      <path d="M0,0 C-5,-10 5,-10 0,-18 C-5,-10 5,-10 0,0" transform="rotate(216)" fill="#ff69b4" stroke="#ffe4f2" stroke-width="0.6"/>
+      <path d="M0,0 C-5,-10 5,-10 0,-18 C-5,-10 5,-10 0,0" transform="rotate(288)" fill="#ff8dc7" stroke="#ffe4f2" stroke-width="0.6"/>
+      <!-- Pistilos centrales -->
+      <circle cx="0" cy="0" r="3.2" fill="#fffb00"/>
+      <circle cx="0" cy="0" r="1.5" fill="#ff0055"/>
     </g>
 
-    <!-- Pétalo Individual -->
-    <path id="single-petal" d="M0,0 C-3,-6 3,-10 0,-16 C-3,-10 3,-6 0,0 Z" fill="#ff99c8"/>
+    <g id="flower-bud">
+      <ellipse cx="0" cy="0" rx="3.5" ry="6" fill="#ff4081" transform="rotate(30)"/>
+      <ellipse cx="3" cy="2" rx="3" ry="5" fill="#ff80ab" transform="rotate(15)"/>
+      <circle cx="0" cy="4" r="1.5" fill="#501224"/>
+    </g>
+
+    <!-- Pétalo Suelto Volando -->
+    <g id="petal">
+      <path d="M0,0 C-3,-6 3,-11 0,-16 C-4,-10 3,-5 0,0 Z" fill="#ff79b0" opacity="0.95"/>
+      <path d="M-1,-2 C-2,-6 1,-9 0,-13" stroke="#ffffff" stroke-width="0.5" fill="none" opacity="0.7"/>
+    </g>
   </defs>
 
   <style>
-    /* Tipografías y Textos */
-    .terminal-sub { font-family: 'Fira Code', 'Courier New', Consolas, monospace; font-weight: 700; font-size: 13px; fill: #00ffff; letter-spacing: 2.5px; }
-    .title-name { font-family: 'Impact', 'Segoe UI', -apple-system, sans-serif; font-weight: 900; font-size: 50px; fill: url(#neonTextGrad); letter-spacing: 2px; }
-    .subtitle-role { font-family: 'Fira Code', 'Courier New', Consolas, monospace; font-weight: 700; font-size: 20px; fill: #00ffff; letter-spacing: 1.5px; }
-    .bio-line1 { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 600; font-size: 15px; fill: #f1f5f9; letter-spacing: 0.5px; }
-    .bio-line2 { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 500; font-size: 13.5px; fill: #cbd5e1; letter-spacing: 0.3px; }
-    .badge-label { font-family: 'Fira Code', monospace; font-weight: 700; font-size: 11px; letter-spacing: 0.5px; }
+    /* Tipografías Retro Pixel & Display */
+    .title-pixel { 
+      font-family: 'Courier New', 'Lucida Console', 'Press Start 2P', monospace; 
+      font-weight: 900; 
+      font-size: 44px; 
+      fill: #ffffff; 
+      letter-spacing: 2px;
+    }
+    .badge-terminal {
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-weight: 700;
+      font-size: 11.5px;
+      fill: #00ffff;
+      letter-spacing: 2px;
+    }
+    .role-text {
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-weight: 800;
+      font-size: 21px;
+      letter-spacing: 1.5px;
+    }
+    .role-magenta { fill: #ff1493; }
+    .role-cursor { fill: #00ffff; }
+    .bio-line {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 13.5px;
+      fill: #e2e8f0;
+      letter-spacing: 0.3px;
+    }
+    .badge-txt {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      fill: #ffffff;
+      letter-spacing: 0.4px;
+    }
 
-    /* Animación: Parpadeo de Cursor */
-    @keyframes blink {
-      0%, 49% { opacity: 1; }
+    /* Animaciones CSS Nativas */
+    @keyframes cursorBlink {
+      0%, 45% { opacity: 1; }
       50%, 100% { opacity: 0; }
     }
-    .cursor-blink { animation: blink 0.9s infinite; }
+    .anim-cursor { animation: cursorBlink 0.9s infinite; }
 
-    /* Animación: Pulsación Glow Neón */
-    @keyframes neonPulse {
-      0%, 100% { filter: drop-shadow(0 0 4px #00ffff) drop-shadow(0 0 10px #ff00ff); opacity: 0.95; }
-      50% { filter: drop-shadow(0 0 8px #00ffff) drop-shadow(0 0 18px #ff00ff); opacity: 1; }
+    @keyframes pulseGlow {
+      0%, 100% { filter: drop-shadow(0 0 5px #00ffff) drop-shadow(0 0 12px #ff00ff); }
+      50% { filter: drop-shadow(0 0 10px #00ffff) drop-shadow(0 0 24px #ff00ff); }
     }
-    .pulsing-glow { animation: neonPulse 3s ease-in-out infinite; }
+    .anim-glow { animation: pulseGlow 3.5s ease-in-out infinite; }
 
-    @keyframes sunGlow {
-      0%, 100% { filter: drop-shadow(0 0 12px #ff00ff) drop-shadow(0 0 25px #d946ef); }
-      50% { filter: drop-shadow(0 0 22px #ff00ff) drop-shadow(0 0 45px #f43f5e); }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.3); }
     }
-    .sun-animated { animation: sunGlow 4s ease-in-out infinite; }
+    .star-1 { animation: twinkle 2.3s infinite ease-in-out; }
+    .star-2 { animation: twinkle 3.2s infinite ease-in-out; }
+    .star-3 { animation: twinkle 1.8s infinite ease-in-out; }
 
-    /* Animación: Estrellas Parpadeando */
-    @keyframes starTwinkle1 { 0%, 100% { opacity: 0.2; transform: scale(0.8); } 50% { opacity: 1; transform: scale(1.3); } }
-    @keyframes starTwinkle2 { 0%, 100% { opacity: 0.9; } 50% { opacity: 0.15; } }
-    @keyframes starTwinkle3 { 0%, 100% { opacity: 0.3; } 30% { opacity: 1; } 70% { opacity: 0.4; } }
-    
-    .twinkle-1 { animation: starTwinkle1 2.2s infinite ease-in-out; }
-    .twinkle-2 { animation: starTwinkle2 3.1s infinite ease-in-out; }
-    .twinkle-3 { animation: starTwinkle3 1.8s infinite ease-in-out; }
-
-    /* Animación: Pétalos de Sakura Cayendo */
-    @keyframes petalFall1 {
+    /* Caída Continua de Pétalos Sakura */
+    @keyframes fallDiag1 {
       0% { transform: translate(0px, -20px) rotate(0deg); opacity: 0; }
-      10% { opacity: 0.9; }
-      90% { opacity: 0.8; }
-      100% { transform: translate(180px, 420px) rotate(380deg); opacity: 0; }
+      10% { opacity: 0.95; }
+      90% { opacity: 0.9; }
+      100% { transform: translate(240px, 430px) rotate(380deg); opacity: 0; }
     }
-    @keyframes petalFall2 {
-      0% { transform: translate(0px, -15px) rotate(45deg); opacity: 0; }
-      15% { opacity: 0.95; }
+    @keyframes fallDiag2 {
+      0% { transform: translate(0px, -20px) rotate(30deg); opacity: 0; }
+      15% { opacity: 1; }
       85% { opacity: 0.85; }
-      100% { transform: translate(-140px, 420px) rotate(-320deg); opacity: 0; }
+      100% { transform: translate(-180px, 430px) rotate(-340deg); opacity: 0; }
     }
-    @keyframes petalFall3 {
-      0% { transform: translate(0px, -25px) rotate(10deg); opacity: 0; }
-      12% { opacity: 1; }
-      88% { opacity: 0.7; }
-      100% { transform: translate(110px, 420px) rotate(420deg); opacity: 0; }
+    @keyframes fallDiag3 {
+      0% { transform: translate(0px, -20px) rotate(60deg); opacity: 0; }
+      12% { opacity: 0.9; }
+      88% { opacity: 0.8; }
+      100% { transform: translate(160px, 430px) rotate(450deg); opacity: 0; }
     }
-    @keyframes waterRipple {
-      0%, 100% { opacity: 0.35; transform: scaleX(1); }
-      50% { opacity: 0.8; transform: scaleX(1.03); }
-    }
-    .ripple { animation: waterRipple 3s infinite ease-in-out; }
+    .petal-fall-1 { animation: fallDiag1 7.5s linear infinite; }
+    .petal-fall-2 { animation: fallDiag2 9.5s linear infinite; }
+    .petal-fall-3 { animation: fallDiag3 6.8s linear infinite; }
+    .petal-fall-4 { animation: fallDiag1 8.8s linear infinite; }
+    .petal-fall-5 { animation: fallDiag2 11s linear infinite; }
+    .petal-fall-6 { animation: fallDiag3 7.9s linear infinite; }
 
-    .falling-petal-1 { animation: petalFall1 7s linear infinite; }
-    .falling-petal-2 { animation: petalFall2 9s linear infinite; }
-    .falling-petal-3 { animation: petalFall3 8s linear infinite; }
-    .falling-petal-4 { animation: petalFall1 6.5s linear infinite; }
-    .falling-petal-5 { animation: petalFall2 10.5s linear infinite; }
-    .falling-petal-6 { animation: petalFall3 7.8s linear infinite; }
+    /* Reflejo de Agua Synthwave */
+    @keyframes waterShimmer {
+      0%, 100% { opacity: 0.45; transform: scaleX(1); }
+      50% { opacity: 0.85; transform: scaleX(1.025); }
+    }
+    .water-line { animation: waterShimmer 3s ease-in-out infinite; }
   </style>
 
   <!-- ================= 1. CIELO NOCTURNO Y FONDO ================= -->
-  <rect x="0" y="0" width="1600" height="270" fill="url(#skyGrad)"/>
+  <rect x="0" y="0" width="1600" height="290" fill="url(#skyGrad)"/>
 
-  <!-- Estrellas Pixel Art y Synthwave -->
-  <g id="stars-field">
-    <rect x="120" y="30" width="2" height="2" fill="#00ffff" class="twinkle-1"/>
-    <rect x="180" y="75" width="3" height="3" fill="#ffffff" class="twinkle-2"/>
-    <rect x="290" y="40" width="2" height="2" fill="#ff77a8" class="twinkle-3"/>
-    <rect x="420" y="25" width="2.5" height="2.5" fill="#00ffff" class="twinkle-1"/>
-    <rect x="540" y="65" width="2" height="2" fill="#ffffff" class="twinkle-2"/>
-    <rect x="680" y="35" width="3" height="3" fill="#a855f7" class="twinkle-3"/>
-    <rect x="790" y="20" width="2" height="2" fill="#00ffff" class="twinkle-1"/>
-    <rect x="850" y="85" width="2.5" height="2.5" fill="#ffffff" class="twinkle-2"/>
-    <rect x="940" y="30" width="3" height="3" fill="#ff00ff" class="twinkle-3"/>
-    <rect x="1080" y="55" width="2" height="2" fill="#00ffff" class="twinkle-1"/>
-    <rect x="1190" y="25" width="3" height="3" fill="#ffffff" class="twinkle-2"/>
-    <rect x="1260" y="70" width="2" height="2" fill="#facc15" class="twinkle-3"/>
-    <rect x="1340" y="40" width="2.5" height="2.5" fill="#00ffff" class="twinkle-1"/>
-    <rect x="1420" y="80" width="3" height="3" fill="#ff00ff" class="twinkle-2"/>
-    <rect x="1510" y="35" width="2" height="2" fill="#ffffff" class="twinkle-3"/>
-    <rect x="1560" y="90" width="2" height="2" fill="#00ffff" class="twinkle-1"/>
-    
-    <g transform="translate(630, 80)" class="twinkle-1">
+  <!-- Bruma / Nebulosa Púrpura en el Horizonte -->
+  <circle cx="1060" cy="270" r="340" fill="#9333ea" opacity="0.25" filter="url(#glow-soft)"/>
+  <circle cx="1250" cy="140" r="160" fill="#ff00ff" opacity="0.18" filter="url(#glow-soft)"/>
+  <circle cx="700" cy="260" r="280" fill="#3b0764" opacity="0.3" filter="url(#glow-soft)"/>
+
+  <!-- Campo de Estrellas Pixeladas -->
+  <g id="stars">
+    <rect x="220" y="45" width="2" height="2" fill="#00ffff" class="star-1"/>
+    <rect x="340" y="70" width="2.5" height="2.5" fill="#ffffff" class="star-2"/>
+    <rect x="480" y="30" width="2" height="2" fill="#ff77bb" class="star-3"/>
+    <rect x="620" y="55" width="3" height="3" fill="#ffffff" class="star-1"/>
+    <rect x="740" y="25" width="2" height="2" fill="#00ffff" class="star-2"/>
+    <rect x="830" y="65" width="2.5" height="2.5" fill="#facc15" class="star-3"/>
+    <rect x="920" y="35" width="3" height="3" fill="#ffffff" class="star-1"/>
+    <rect x="1010" y="20" width="2" height="2" fill="#ff00ff" class="star-2"/>
+    <rect x="1140" y="50" width="2.5" height="2.5" fill="#00ffff" class="star-3"/>
+    <rect x="1350" y="30" width="3" height="3" fill="#ffffff" class="star-1"/>
+    <rect x="1440" y="60" width="2" height="2" fill="#ff77bb" class="star-2"/>
+    <rect x="1520" y="40" width="2.5" height="2.5" fill="#00ffff" class="star-3"/>
+    <!-- Cruz Pixel Estelar -->
+    <g transform="translate(680, 40)" class="star-1">
       <rect x="2" y="0" width="2" height="6" fill="#00ffff"/>
       <rect x="0" y="2" width="6" height="2" fill="#00ffff"/>
     </g>
-    <g transform="translate(1120, 45)" class="twinkle-2">
-      <rect x="2" y="0" width="2" height="6" fill="#ff00ff"/>
-      <rect x="0" y="2" width="6" height="2" fill="#ff00ff"/>
-    </g>
-    <g transform="translate(1390, 30)" class="twinkle-3">
-      <rect x="2" y="0" width="2" height="6" fill="#ffffff"/>
-      <rect x="0" y="2" width="6" height="2" fill="#ffffff"/>
+    <g transform="translate(1400, 45)" class="star-2">
+      <rect x="2" y="0" width="2" height="6" fill="#ff77bb"/>
+      <rect x="0" y="2" width="6" height="2" fill="#ff77bb"/>
     </g>
   </g>
 
-  <!-- ================= 2. SOL / LUNA SYNTHWAVE ================= -->
-  <g class="sun-animated">
-    <circle cx="980" cy="175" r="105" fill="url(#synthSunGrad)" mask="url(#sunStripesMask)"/>
-    <circle cx="980" cy="175" r="108" fill="none" stroke="#ff00ff" stroke-width="1.5" stroke-opacity="0.6"/>
+  <!-- ================= 2. LUNA SYNTHWAVE MAGENTA (A LA DERECHA DEL FUJI) ================= -->
+  <!-- Centrada en X=1240, Y=130 con radio de 65px (exactamente como en la referencia) -->
+  <g id="synth-moon">
+    <!-- Glow Exterior -->
+    <circle cx="1240" cy="130" r="70" fill="#ff00aa" opacity="0.35" filter="url(#glow-magenta)"/>
+    <!-- Cuerpo de la Luna con Máscara de Rayas -->
+    <circle cx="1240" cy="130" r="62" fill="url(#moonGrad)" mask="url(#moonStripes)"/>
+    <circle cx="1240" cy="130" r="63" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.6"/>
   </g>
 
-  <!-- ================= 3. MONTE FUJI (PIXEL ART) ================= -->
+  <!-- ================= 3. MONTE FUJI REALISTA SYNTHWAVE ================= -->
   <g id="mount-fuji">
-    <polygon points="810,270 915,120 1045,120 1150,270" fill="url(#fujiGrad)"/>
-    <polygon points="915,120 1045,120 1060,150 1040,165 1015,145 985,170 960,150 930,165 910,145 900,150" fill="url(#snowGrad)"/>
-    <polygon points="980,120 1045,120 1060,150 1040,165 1015,145 990,170" fill="#c7d2fe" fill-opacity="0.6"/>
-    <line x1="810" y1="270" x2="915" y2="120" stroke="#ff00ff" stroke-width="1.5" stroke-opacity="0.5"/>
-    <line x1="1150" y1="270" x2="1045" y2="120" stroke="#00ffff" stroke-width="1.5" stroke-opacity="0.5"/>
+    <!-- Silueta Principal de la Montaña (Base Y=290, Cumbre X=1045 Y=135) -->
+    <polygon points="760,290 890,210 990,150 1025,135 1065,135 1100,150 1200,210 1340,290" fill="url(#fujiDark)"/>
+
+    <!-- Laderas con Sombras & Relieve Estilo Pixel Art -->
+    <polygon points="1025,135 1045,135 1065,135 1140,220 1230,260 1340,290 1180,290 1090,230 1045,180" fill="#120626" opacity="0.8"/>
+    <!-- Aristas Púrpuras Iluminadas por la Luna -->
+    <path d="M1065,135 L1120,180 L1180,230 L1260,270 L1340,290" stroke="#d946ef" stroke-width="2.5" fill="none" opacity="0.75" filter="url(#glow-soft)"/>
+    <path d="M1025,135 L960,190 L900,240 L830,275 L760,290" stroke="#3b0764" stroke-width="2" fill="none" opacity="0.8"/>
+
+    <!-- Glaciar de Nieve de la Cumbre con Lenguas Fluyentes (Fuji Real) -->
+    <path d="M1025,135 L1065,135 
+             C1075,145 1088,155 1095,170 
+             C1090,175 1080,172 1072,185 
+             C1065,195 1062,210 1055,225
+             C1050,215 1045,195 1040,185 
+             C1035,190 1030,205 1025,218 
+             C1020,200 1015,180 1008,172
+             C1000,185 992,192 985,180 
+             C980,165 995,150 1025,135 Z" 
+          fill="url(#fujiSnow)"/>
+
+    <!-- Sombras de Relieve en la Nieve -->
+    <path d="M1045,135 L1065,135 
+             C1075,145 1088,155 1095,170 
+             C1090,175 1080,172 1072,185 
+             C1065,195 1060,215 1055,225
+             L1048,180 L1045,135 Z" 
+          fill="#c084fc" opacity="0.6"/>
+
+    <!-- Resaltes Blancos Brillantes en las Crestas de Nieve -->
+    <path d="M1025,135 L1065,135 L1058,155 L1045,145 L1035,160 Z" fill="#ffffff"/>
+    <line x1="1040" y1="145" x2="1025" y2="215" stroke="#ffffff" stroke-width="1.8" opacity="0.85"/>
+    <line x1="1055" y1="145" x2="1055" y2="220" stroke="#f5d0fe" stroke-width="1.5" opacity="0.7"/>
   </g>
 
-  <!-- ================= 4. PAGODA JAPONESA EN SEGUNDO PLANO ================= -->
-  <g id="pagoda" fill="#130826" stroke="#a855f7" stroke-width="1">
-    <rect x="745" y="240" width="40" height="30" fill="#0d041a"/>
-    <path d="M725,240 C745,236 785,236 805,240 L795,232 L735,232 Z" fill="#1f0a38"/>
-    <rect x="750" y="218" width="30" height="14" fill="#0d041a"/>
-    <rect x="762" y="222" width="6" height="10" fill="#facc15" stroke="none"/>
-    <path d="M732,218 C750,214 780,214 798,218 L790,211 L740,211 Z" fill="#1f0a38"/>
-    <rect x="754" y="198" width="22" height="13" fill="#0d041a"/>
-    <rect x="763" y="201" width="5" height="8" fill="#facc15" stroke="none"/>
-    <path d="M738,198 C752,194 776,194 792,198 L785,192 L745,192 Z" fill="#1f0a38"/>
-    <line x1="765" y1="192" x2="765" y2="170" stroke="#00ffff" stroke-width="2"/>
-    <circle cx="765" cy="168" r="2.5" fill="#ff00ff" stroke="none"/>
+  <!-- ================= 4. CIUDAD FUTURISTA CYBERPUNK EN LA COSTA ================= -->
+  <g id="cyber-city">
+    <!-- Perfil de rascacielos iluminados en la base del monte -->
+    <rect x="880" y="268" width="18" height="22" fill="#090214"/>
+    <rect x="902" y="258" width="22" height="32" fill="#0d041a"/>
+    <rect x="928" y="264" width="16" height="26" fill="#080210"/>
+    <rect x="948" y="252" width="28" height="38" fill="#110424"/>
+    <rect x="980" y="260" width="20" height="30" fill="#0a0216"/>
+    <rect x="1004" y="248" width="30" height="42" fill="#130526"/>
+    <rect x="1038" y="256" width="24" height="34" fill="#0b0318"/>
+    <rect x="1066" y="244" width="32" height="46" fill="#14052a"/>
+    <rect x="1102" y="254" width="26" height="36" fill="#0c031c"/>
+    <rect x="1132" y="262" width="34" height="28" fill="#15062b"/>
+    <rect x="1170" y="250" width="28" height="40" fill="#0e0420"/>
+
+    <!-- Antenas Neón de Telecomunicaciones con Balizas -->
+    <line x1="962" y1="252" x2="962" y2="235" stroke="#00ffff" stroke-width="1.5"/>
+    <circle cx="962" cy="233" r="1.8" fill="#ff00ff" class="star-1"/>
+    <line x1="1020" y1="248" x2="1020" y2="228" stroke="#ff00ff" stroke-width="1.5"/>
+    <circle cx="1020" cy="226" r="2" fill="#00ffff" class="star-2"/>
+    <line x1="1082" y1="244" x2="1082" y2="222" stroke="#00ffff" stroke-width="1.5"/>
+    <circle cx="1082" cy="220" r="2" fill="#ffffff" class="star-3"/>
+
+    <!-- Matriz de Ventanas Pixeladas Neón (Cyan, Magenta, Violeta, Amarillo) -->
+    <g fill="#00ffff">
+      <rect x="906" y="262" width="2" height="3"/><rect x="914" y="262" width="2" height="3"/>
+      <rect x="952" y="258" width="2" height="3"/><rect x="964" y="258" width="2" height="3"/>
+      <rect x="1010" y="254" width="2.5" height="3.5"/><rect x="1022" y="254" width="2.5" height="3.5"/>
+      <rect x="1072" y="250" width="2.5" height="3.5"/><rect x="1086" y="250" width="2.5" height="3.5"/>
+      <rect x="1140" y="268" width="2" height="3"/><rect x="1152" y="268" width="2" height="3"/>
+    </g>
+    <g fill="#ff00aa">
+      <rect x="910" y="272" width="2" height="3"/><rect x="958" y="268" width="2" height="3"/>
+      <rect x="1016" y="266" width="2.5" height="3.5"/><rect x="1078" y="262" width="2.5" height="3.5"/>
+      <rect x="1146" y="276" width="2" height="3"/><rect x="1178" y="260" width="2.5" height="3.5"/>
+    </g>
+    <g fill="#facc15">
+      <rect x="952" y="278" width="2" height="3"/><rect x="1022" y="276" width="2.5" height="3.5"/>
+      <rect x="1086" y="274" width="2.5" height="3.5"/><rect x="1186" y="270" width="2" height="3"/>
+    </g>
   </g>
 
-  <!-- ================= 5. CIUDAD FUTURISTA CYBERPUNK ================= -->
-  <g id="cyber-skyline">
-    <rect x="1140" y="170" width="36" height="100" fill="#0c0418" stroke="#ff00ff" stroke-width="0.8"/>
-    <rect x="1146" y="180" width="4" height="6" fill="#00ffff"/>
-    <rect x="1160" y="180" width="4" height="6" fill="#00ffff"/>
-    <rect x="1146" y="200" width="4" height="6" fill="#ff00ff"/>
-    <rect x="1160" y="200" width="4" height="6" fill="#facc15"/>
-    <rect x="1146" y="220" width="4" height="6" fill="#00ffff"/>
-    <rect x="1160" y="240" width="4" height="6" fill="#00ffff"/>
-
-    <rect x="1185" y="145" width="44" height="125" fill="#080214" stroke="#00ffff" stroke-width="0.8"/>
-    <line x1="1207" y1="145" x2="1207" y2="120" stroke="#00ffff" stroke-width="1.5"/>
-    <circle cx="1207" cy="118" r="2" fill="#ff00ff"/>
-    <rect x="1193" y="155" width="3" height="4" fill="#00ffff"/>
-    <rect x="1202" y="155" width="3" height="4" fill="#00ffff"/>
-    <rect x="1211" y="155" width="3" height="4" fill="#ff00ff"/>
-    <rect x="1220" y="155" width="3" height="4" fill="#00ffff"/>
-    <rect x="1193" y="175" width="3" height="4" fill="#facc15"/>
-    <rect x="1211" y="175" width="3" height="4" fill="#00ffff"/>
-    <rect x="1193" y="195" width="3" height="4" fill="#00ffff"/>
-    <rect x="1220" y="195" width="3" height="4" fill="#ff00ff"/>
-
-    <rect x="1235" y="190" width="30" height="80" fill="#0d041a" stroke="#a855f7" stroke-width="0.8"/>
-    <rect x="1272" y="160" width="48" height="110" fill="#080212" stroke="#ff00ff" stroke-width="0.8"/>
-    <line x1="1296" y1="160" x2="1296" y2="135" stroke="#ff00ff" stroke-width="1.5"/>
-    <circle cx="1296" cy="133" r="2.5" fill="#00ffff" class="twinkle-1"/>
-
-    <rect x="1440" y="180" width="35" height="90" fill="#0d041a" stroke="#00ffff" stroke-width="0.8"/>
-    <rect x="1480" y="150" width="42" height="120" fill="#090214" stroke="#a855f7" stroke-width="0.8"/>
-    <line x1="1501" y1="150" x2="1501" y2="125" stroke="#a855f7" stroke-width="1.5"/>
-    <rect x="1530" y="195" width="50" height="75" fill="#0d041a" stroke="#ff00ff" stroke-width="0.8"/>
+  <!-- ================= 5. TORII JAPONÉS ILUMINADO ================= -->
+  <!-- Situado en la orilla derecha frente al Fuji (X=1110 a X=1200) -->
+  <g id="torii" filter="url(#glow-soft)">
+    <!-- Dintel Superior Curvado Kasagi Bermellón / Magenta -->
+    <path d="M1105,282 C1135,274 1175,274 1205,282 L1207,288 C1175,281 1135,281 1103,288 Z" fill="#ff0066"/>
+    <!-- Segundo Dintel Nuki -->
+    <rect x="1112" y="296" width="86" height="5.5" rx="1.5" fill="#ff0055"/>
+    <!-- Soporte Central Gakuzuka -->
+    <rect x="1152" y="284" width="6" height="12" fill="#00ffff"/>
+    <!-- Columnas Principales Hashira con Contorno Neón Cyan -->
+    <rect x="1122" y="296" width="7" height="42" fill="#ff0055"/>
+    <rect x="1181" y="296" width="7" height="42" fill="#ff0055"/>
+    <line x1="1125.5" y1="300" x2="1125.5" y2="338" stroke="#00ffff" stroke-width="1.2"/>
+    <line x1="1184.5" y1="300" x2="1184.5" y2="338" stroke="#00ffff" stroke-width="1.2"/>
+    <!-- Bases de Piedra en la Orilla -->
+    <rect x="1120" y="337" width="11" height="5" rx="1.5" fill="#00ffff"/>
+    <rect x="1179" y="337" width="11" height="5" rx="1.5" fill="#00ffff"/>
   </g>
 
-  <!-- ================= 6. TORII JAPONÉS ILUMINADO ================= -->
-  <g id="torii-gate" filter="url(#glow-magenta)">
-    <path d="M1320,150 C1360,140 1420,140 1460,150 L1464,158 C1420,150 1360,150 1316,158 Z" fill="#ff0077"/>
-    <rect x="1326" y="170" width="128" height="8" rx="2" fill="#ff0077"/>
-    <rect x="1386" y="153" width="8" height="17" fill="#00ffff"/>
-    <rect x="1342" y="170" width="10" height="105" fill="#ff0055"/>
-    <rect x="1428" y="170" width="10" height="105" fill="#ff0055"/>
-    <rect x="1339" y="270" width="16" height="8" rx="2" fill="#00ffff"/>
-    <rect x="1425" y="270" width="16" height="8" rx="2" fill="#00ffff"/>
-    <line x1="1347" y1="178" x2="1347" y2="270" stroke="#00ffff" stroke-width="1.5"/>
-    <line x1="1433" y1="178" x2="1433" y2="270" stroke="#00ffff" stroke-width="1.5"/>
-  </g>
-
-  <!-- ================= 7. AGUA SYNTHWAVE Y REFLEJOS ================= -->
-  <rect x="0" y="270" width="1600" height="130" fill="url(#waterGrad)"/>
-  <line x1="0" y1="270" x2="1600" y2="270" stroke="#00ffff" stroke-width="1.5" stroke-opacity="0.8"/>
-
-  <g stroke="#ff00ff" stroke-opacity="0.4" stroke-width="1.2">
-    <line x1="0" y1="275" x2="1600" y2="275" class="ripple"/>
-    <line x1="0" y1="283" x2="1600" y2="283" stroke="#00ffff" stroke-opacity="0.5"/>
-    <line x1="0" y1="294" x2="1600" y2="294" stroke="#ff00ff" stroke-opacity="0.45" class="ripple"/>
-    <line x1="0" y1="308" x2="1600" y2="308" stroke="#00ffff" stroke-opacity="0.4"/>
-    <line x1="0" y1="326" x2="1600" y2="326" stroke="#ff00ff" stroke-opacity="0.5"/>
-    <line x1="0" y1="348" x2="1600" y2="348" stroke="#00ffff" stroke-opacity="0.35"/>
-    <line x1="0" y1="374" x2="1600" y2="374" stroke="#ff00ff" stroke-opacity="0.3"/>
-  </g>
-
-  <g class="ripple">
-    <rect x="940" y="273" width="80" height="2" fill="#ff00ff" fill-opacity="0.8"/>
-    <rect x="930" y="280" width="100" height="2.5" fill="#f43f5e" fill-opacity="0.7"/>
-    <rect x="915" y="290" width="130" height="3" fill="#fb923c" fill-opacity="0.6"/>
-    <rect x="900" y="303" width="160" height="3.5" fill="#facc15" fill-opacity="0.5"/>
-    <rect x="880" y="320" width="200" height="4" fill="#ff00ff" fill-opacity="0.4"/>
-    <rect x="860" y="342" width="240" height="5" fill="#d946ef" fill-opacity="0.3"/>
+  <!-- ================= 6. PAGODA TRADICIONAL JAPONESA (EXTREMO DERECHO) ================= -->
+  <!-- Silueta detallada de pagoda de 4 niveles con ventanas cálidas -->
+  <g id="pagoda-temple" transform="translate(1360, 195)">
+    <!-- Base de la Pagoda -->
+    <polygon points="40,115 130,115 125,100 45,100" fill="#090214"/>
     
-    <rect x="1340" y="278" width="14" height="2" fill="#00ffff"/>
-    <rect x="1426" y="278" width="14" height="2" fill="#00ffff"/>
-    <rect x="1336" y="288" width="22" height="2.5" fill="#ff0077" fill-opacity="0.7"/>
-    <rect x="1422" y="288" width="22" height="2.5" fill="#ff0077" fill-opacity="0.7"/>
-    <rect x="1330" y="302" width="35" height="3" fill="#ff0077" fill-opacity="0.5"/>
-    <rect x="1415" y="302" width="35" height="3" fill="#ff0077" fill-opacity="0.5"/>
+    <!-- Nivel 1 -->
+    <rect x="52" y="80" width="66" height="20" fill="#100424"/>
+    <rect x="62" y="84" width="10" height="12" fill="#ff77bb" filter="url(#glow-soft)"/>
+    <rect x="80" y="84" width="10" height="12" fill="#ff00ff" filter="url(#glow-soft)"/>
+    <rect x="98" y="84" width="10" height="12" fill="#ff77bb" filter="url(#glow-soft)"/>
+    <!-- Techo 1 Curvado hacia arriba en las puntas -->
+    <path d="M30,80 C50,72 120,72 140,80 L135,74 C115,68 55,68 35,74 Z" fill="#20063b" stroke="#ff00ff" stroke-width="1"/>
+
+    <!-- Nivel 2 -->
+    <rect x="58" y="56" width="54" height="18" fill="#100424"/>
+    <rect x="68" y="60" width="8" height="10" fill="#facc15"/>
+    <rect x="82" y="60" width="8" height="10" fill="#ff00ff"/>
+    <rect x="96" y="60" width="8" height="10" fill="#facc15"/>
+    <!-- Techo 2 -->
+    <path d="M38,56 C56,50 114,50 132,56 L128,51 C110,46 60,46 42,51 Z" fill="#20063b" stroke="#ff00ff" stroke-width="1"/>
+
+    <!-- Nivel 3 -->
+    <rect x="64" y="36" width="42" height="15" fill="#100424"/>
+    <rect x="74" y="39" width="7" height="9" fill="#00ffff"/>
+    <rect x="89" y="39" width="7" height="9" fill="#ff77bb"/>
+    <!-- Techo 3 -->
+    <path d="M46,36 C62,31 108,31 124,36 L120,32 C105,28 65,28 50,32 Z" fill="#20063b" stroke="#ff00ff" stroke-width="1"/>
+
+    <!-- Remate Superior Sorin (Aguja Sagrada) -->
+    <line x1="85" y1="28" x2="85" y2="3" stroke="#00ffff" stroke-width="2"/>
+    <circle cx="85" cy="2" r="2.5" fill="#ff00ff" filter="url(#glow-soft)"/>
   </g>
 
-  <!-- ================= 8. RAMAS DE SAKURA (CEREZO) ================= -->
-  <!-- Esquina Superior Izquierda -->
-  <g id="sakura-left">
-    <path d="M-10,-10 Q80,20 160,15 T260,65 T330,40" fill="none" stroke="#261019" stroke-width="7" stroke-linecap="round"/>
-    <path d="M110,18 Q140,55 190,75" fill="none" stroke="#261019" stroke-width="4.5" stroke-linecap="round"/>
-    <path d="M190,45 Q220,95 260,105" fill="none" stroke="#261019" stroke-width="3" stroke-linecap="round"/>
-    <path d="M40,5 Q70,70 110,85" fill="none" stroke="#261019" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- ================= 7. AGUA SYNTHWAVE CON REFLEJOS VIBRANTES ================= -->
+  <rect x="0" y="290" width="1600" height="110" fill="url(#waterGrad)"/>
+  <!-- Línea de Horizonte Costera Neón -->
+  <line x1="0" y1="290" x2="1600" y2="290" stroke="#00ffff" stroke-width="1.2" opacity="0.8"/>
 
-    <use href="#sakura-flower" x="70" y="20"/>
-    <use href="#sakura-flower" x="110" y="45" transform="scale(1.2)"/>
-    <use href="#sakura-flower" x="145" y="18" transform="scale(0.9)"/>
-    <use href="#sakura-flower" x="180" y="65"/>
-    <use href="#sakura-flower" x="225" y="45" transform="scale(1.1)"/>
-    <use href="#sakura-flower" x="260" y="70"/>
-    <use href="#sakura-flower" x="280" y="105" transform="scale(0.85)"/>
-    <use href="#sakura-flower" x="325" y="42" transform="scale(1.15)"/>
-    <use href="#sakura-flower" x="100" y="85" transform="scale(0.9)"/>
+  <!-- Ondas y Reflejos Neón en el Lago -->
+  <g class="water-line">
+    <!-- Reflejos del Monte Fuji y Nebulosa Púrpura -->
+    <ellipse cx="1060" cy="305" rx="180" ry="6" fill="#9333ea" opacity="0.35"/>
+    <ellipse cx="1080" cy="325" rx="140" ry="7" fill="#c026d3" opacity="0.25"/>
+
+    <!-- Reflejo de la Luna Synthwave (Columna Rosa Neón Ondulante) -->
+    <rect x="1200" y="293" width="80" height="2" fill="#ffffff" opacity="0.8"/>
+    <rect x="1190" y="298" width="100" height="2.5" fill="#ff77bb" opacity="0.75"/>
+    <rect x="1175" y="306" width="130" height="3" fill="#ff1493" opacity="0.65"/>
+    <rect x="1160" y="318" width="160" height="3.5" fill="#c026d3" opacity="0.55"/>
+    <rect x="1140" y="335" width="200" height="4.5" fill="#9333ea" opacity="0.45"/>
+    <rect x="1120" y="358" width="240" height="5.5" fill="#ff00aa" opacity="0.3"/>
+
+    <!-- Reflejo del Torii -->
+    <rect x="1120" y="342" width="12" height="2" fill="#00ffff"/>
+    <rect x="1179" y="342" width="12" height="2" fill="#00ffff"/>
+    <rect x="1115" y="348" width="22" height="2.5" fill="#ff0066" opacity="0.6"/>
+    <rect x="1174" y="348" width="22" height="2.5" fill="#ff0066" opacity="0.6"/>
+
+    <!-- Ondas de Luz Cyan & Magenta Dispersas -->
+    <line x1="200" y1="310" x2="600" y2="310" stroke="#00ffff" stroke-width="1" opacity="0.25"/>
+    <line x1="100" y1="335" x2="750" y2="335" stroke="#ff00ff" stroke-width="1.2" opacity="0.2"/>
+    <line x1="300" y1="365" x2="900" y2="365" stroke="#00ffff" stroke-width="1" opacity="0.18"/>
   </g>
 
-  <!-- Esquina Superior Derecha -->
-  <g id="sakura-right">
-    <path d="M1610,-10 Q1520,30 1440,20 T1320,60 T1240,35" fill="none" stroke="#261019" stroke-width="7" stroke-linecap="round"/>
-    <path d="M1490,25 Q1450,65 1400,85" fill="none" stroke="#261019" stroke-width="4" stroke-linecap="round"/>
-    <path d="M1360,45 Q1330,95 1280,110" fill="none" stroke="#261019" stroke-width="3" stroke-linecap="round"/>
+  <!-- ================= 8. RAMAS DE SAKURA (ESQUINAS SUPERIORES) ================= -->
+  <!-- Ramas Izquierdas (Densas y Florecidas como en la Imagen) -->
+  <g id="sakura-left-branch">
+    <!-- Tronco & Ramificaciones de Madera Oscura -->
+    <path d="M-10,-10 Q120,40 240,25 T420,70 T560,35" fill="none" stroke="#1d0716" stroke-width="9" stroke-linecap="round"/>
+    <path d="M160,32 Q210,85 290,110 T390,125" fill="none" stroke="#1d0716" stroke-width="5" stroke-linecap="round"/>
+    <path d="M260,65 Q310,130 360,145" fill="none" stroke="#1d0716" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M50,15 Q90,95 150,125" fill="none" stroke="#1d0716" stroke-width="4.5" stroke-linecap="round"/>
+
+    <!-- Racimos de Flores de Cerezo -->
+    <use href="#flower-full" x="45" y="25" transform="scale(1.3)"/>
+    <use href="#flower-full" x="90" y="55" transform="scale(1.1)"/>
+    <use href="#flower-full" x="135" y="25" transform="scale(1.4)"/>
+    <use href="#flower-full" x="175" y="70" transform="scale(1.2)"/>
+    <use href="#flower-full" x="220" y="35" transform="scale(1.5)"/>
+    <use href="#flower-full" x="255" y="85" transform="scale(1.2)"/>
+    <use href="#flower-full" x="295" y="50" transform="scale(1.3)"/>
+    <use href="#flower-full" x="335" y="95" transform="scale(1.4)"/>
+    <use href="#flower-full" x="380" y="65" transform="scale(1.1)"/>
+    <use href="#flower-full" x="425" y="115" transform="scale(1.2)"/>
+    <use href="#flower-full" x="480" y="45" transform="scale(1.3)"/>
+    <use href="#flower-full" x="535" y="35" transform="scale(1.1)"/>
+
+    <!-- Flores adicionales y capullos -->
+    <use href="#flower-full" x="120" y="110" transform="scale(1.0)"/>
+    <use href="#flower-full" x="155" y="135" transform="scale(0.9)"/>
+    <use href="#flower-full" x="345" y="140" transform="scale(0.9)"/>
+    <use href="#flower-bud" x="275" y="125"/>
+    <use href="#flower-bud" x="445" y="85"/>
+  </g>
+
+  <!-- Ramas Derechas (Extendidas sobre el Cielo Nocturno) -->
+  <g id="sakura-right-branch">
+    <path d="M1610,-10 Q1480,45 1360,30 T1180,75 T1020,40" fill="none" stroke="#1d0716" stroke-width="8" stroke-linecap="round"/>
+    <path d="M1420,38 Q1370,95 1280,120 T1160,135" fill="none" stroke="#1d0716" stroke-width="5" stroke-linecap="round"/>
+    <path d="M1290,75 Q1240,140 1190,155" fill="none" stroke="#1d0716" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Racimos de Flores de Cerezo Derecha -->
+    <use href="#flower-full" x="1540" y="30" transform="scale(1.4)"/>
+    <use href="#flower-full" x="1475" y="65" transform="scale(1.2)"/>
+    <use href="#flower-full" x="1420" y="30" transform="scale(1.5)"/>
+    <use href="#flower-full" x="1360" y="75" transform="scale(1.3)"/>
+    <use href="#flower-full" x="1305" y="40" transform="scale(1.4)"/>
+    <use href="#flower-full" x="1255" y="95" transform="scale(1.2)"/>
+    <use href="#flower-full" x="1200" y="55" transform="scale(1.3)"/>
+    <use href="#flower-full" x="1145" y="105" transform="scale(1.1)"/>
+    <use href="#flower-full" x="1090" y="50" transform="scale(1.2)"/>
+    <use href="#flower-full" x="1035" y="45" transform="scale(1.0)"/>
+
+    <use href="#flower-full" x="1270" y="130" transform="scale(1.0)"/>
+    <use href="#flower-full" x="1175" y="145" transform="scale(0.9)"/>
+    <use href="#flower-bud" x="1335" y="115"/>
+    <use href="#flower-bud" x="1115" y="85"/>
+  </g>
+
+  <!-- ================= 9. PÉTALOS DE SAKURA CAYENDO CONTINUAMENTE ================= -->
+  <g id="animated-petals">
+    <g class="petal-fall-1" style="transform-origin: 180px 30px;">
+      <use href="#petal" x="180" y="30"/>
+    </g>
+    <g class="petal-fall-2" style="transform-origin: 310px 50px; animation-delay: 1.8s;">
+      <use href="#petal" x="310" y="50"/>
+    </g>
+    <g class="petal-fall-3" style="transform-origin: 460px 40px; animation-delay: 3.5s;">
+      <use href="#petal" x="460" y="40"/>
+    </g>
+    <g class="petal-fall-4" style="transform-origin: 750px 20px; animation-delay: 0.9s;">
+      <use href="#petal" x="750" y="20"/>
+    </g>
+    <g class="petal-fall-5" style="transform-origin: 950px 35px; animation-delay: 2.6s;">
+      <use href="#petal" x="950" y="35"/>
+    </g>
+    <g class="petal-fall-6" style="transform-origin: 1220px 25px; animation-delay: 4.2s;">
+      <use href="#petal" x="1220" y="25"/>
+    </g>
+    <g class="petal-fall-1" style="transform-origin: 1380px 45px; animation-delay: 1.2s;">
+      <use href="#petal" x="1380" y="45"/>
+    </g>
+    <g class="petal-fall-2" style="transform-origin: 1510px 30px; animation-delay: 3s;">
+      <use href="#petal" x="1510" y="30"/>
+    </g>
+    <g class="petal-fall-3" style="transform-origin: 620px 60px; animation-delay: 5s;">
+      <use href="#petal" x="620" y="60"/>
+    </g>
+  </g>
+
+  <!-- ================= 10. CONTENIDO DE TEXTO & INFORMACIÓN DE GIOVANNY PEÑALOZA ================= -->
+  <g transform="translate(68, 62)">
     
-    <use href="#sakura-flower" x="1540" y="20"/>
-    <use href="#sakura-flower" x="1480" y="45" transform="scale(1.1)"/>
-    <use href="#sakura-flower" x="1435" y="22" transform="scale(0.9)"/>
-    <use href="#sakura-flower" x="1395" y="75"/>
-    <use href="#sakura-flower" x="1335" y="55" transform="scale(1.2)"/>
-    <use href="#sakura-flower" x="1290" y="85" transform="scale(0.85)"/>
-    <use href="#sakura-flower" x="1245" y="38" transform="scale(1.1)"/>
-    <use href="#sakura-flower" x="1275" y="112"/>
-  </g>
-
-  <!-- ================= 9. PÉTALOS DE SAKURA CAYENDO (ANIMADOS) ================= -->
-  <g id="falling-petals">
-    <g class="falling-petal-1" style="transform-origin: 200px 20px;">
-      <use href="#single-petal" x="200" y="20"/>
-    </g>
-    <g class="falling-petal-2" style="transform-origin: 320px 40px; animation-delay: 1.5s;">
-      <use href="#single-petal" x="320" y="40"/>
-    </g>
-    <g class="falling-petal-3" style="transform-origin: 150px 70px; animation-delay: 3s;">
-      <use href="#single-petal" x="150" y="70"/>
-    </g>
-    <g class="falling-petal-4" style="transform-origin: 650px 10px; animation-delay: 0.8s;">
-      <use href="#single-petal" x="650" y="10"/>
-    </g>
-    <g class="falling-petal-5" style="transform-origin: 850px 30px; animation-delay: 2.2s;">
-      <use href="#single-petal" x="850" y="30"/>
-    </g>
-    <g class="falling-petal-6" style="transform-origin: 1100px 15px; animation-delay: 4.1s;">
-      <use href="#single-petal" x="1100" y="15"/>
-    </g>
-    <g class="falling-petal-1" style="transform-origin: 1350px 50px; animation-delay: 2.7s;">
-      <use href="#single-petal" x="1350" y="50"/>
-    </g>
-    <g class="falling-petal-2" style="transform-origin: 1450px 30px; animation-delay: 0.4s;">
-      <use href="#single-petal" x="1450" y="30"/>
-    </g>
-    <g class="falling-petal-3" style="transform-origin: 1250px 60px; animation-delay: 3.8s;">
-      <use href="#single-petal" x="1250" y="60"/>
-    </g>
-    <g class="falling-petal-4" style="transform-origin: 480px 25px; animation-delay: 5s;">
-      <use href="#single-petal" x="480" y="25"/>
-    </g>
-  </g>
-
-  <!-- ================= 10. PANEL HUD CYBERPUNK Y CONTENIDO ================= -->
-  <g transform="translate(60, 35)">
-    <!-- Marco y Fondo del Panel -->
-    <path d="M 15 0 
-             L 655 0 
-             L 675 20 
-             L 675 320 
-             L 655 335 
-             L 20 335 
-             L 0 315 
-             L 0 15 Z" 
-          fill="url(#panelBg)" 
-          stroke="#00ffff" 
-          stroke-width="1.8" 
-          stroke-opacity="0.8" 
-          filter="url(#glow-cyan)"/>
-
-    <!-- Acentos de Esquinas Cyberpunk -->
-    <path d="M 0 35 L 0 15 L 15 0 L 35 0" fill="none" stroke="#ff00ff" stroke-width="3"/>
-    <path d="M 640 0 L 655 0 L 675 20 L 675 40" fill="none" stroke="#ff00ff" stroke-width="3"/>
-    <path d="M 675 295 L 675 320 L 655 335 L 635 335" fill="none" stroke="#00ffff" stroke-width="3"/>
-    <path d="M 40 335 L 20 335 L 0 315 L 0 295" fill="none" stroke="#00ffff" stroke-width="3"/>
-
-    <line x1="25" y1="48" x2="650" y2="48" stroke="#334155" stroke-opacity="0.4" stroke-dasharray="4 4"/>
-
-    <!-- LÍNEA 1: Terminal Status Header -->
-    <g transform="translate(30, 32)">
-      <circle cx="6" cy="6" r="4.5" fill="#10b981" class="twinkle-1"/>
-      <circle cx="6" cy="6" r="7" fill="none" stroke="#10b981" stroke-width="1" stroke-opacity="0.6"/>
-      <text x="24" y="10" class="terminal-sub">SYSTEM ONLINE // READY TO DEPLOY</text>
+    <!-- 1. BADGE STATUS TERMINAL (CYAN NEÓN) -->
+    <g transform="translate(0, 0)">
+      <!-- Pastilla redondeada translúcida -->
+      <rect width="320" height="30" rx="15" fill="#040b18" fill-opacity="0.85" stroke="#00ffff" stroke-width="1.4" filter="url(#glow-soft)"/>
+      <!-- Indicador Verde Activo -->
+      <circle cx="16" cy="15" r="4.5" fill="#00ffff" class="star-1"/>
+      <circle cx="16" cy="15" r="7.5" fill="none" stroke="#00ffff" stroke-width="1" opacity="0.6"/>
+      <!-- Texto Monospace -->
+      <text x="32" y="19" class="badge-terminal">SYSTEM ONLINE // READY TO DEPLOY</text>
+      <!-- Cursor final en el badge -->
+      <rect x="296" y="9" width="7" height="12" fill="#00ffff" opacity="0.75"/>
     </g>
 
-    <!-- LÍNEA 2: Nombre de Impacto -->
-    <text x="30" y="102" class="title-name pulsing-glow">Giovanny Peñaloza</text>
-
-    <!-- LÍNEA 3: Subtítulo con Cursor Parpadeante -->
-    <g transform="translate(30, 140)">
-      <text x="0" y="0" class="subtitle-role">&gt; FULL STACK DEVELOPER<tspan class="cursor-blink" fill="#ff00ff">_</tspan></text>
+    <!-- 2. NOMBRE PRINCIPAL: GIOVANNY PEÑALOZA (ESTILO PIXEL RETRO DISPLAY) -->
+    <g transform="translate(0, 72)">
+      <!-- Sombra Neón de Respaldo Cyan -->
+      <text x="2" y="2" class="title-pixel" fill="#00ffff" opacity="0.75" filter="url(#glow-cyan)">GIOVANNY PEÑALOZA</text>
+      <!-- Texto Frontal Blanco Puro con Glow -->
+      <text x="0" y="0" class="title-pixel anim-glow">GIOVANNY PEÑALOZA</text>
     </g>
 
-    <!-- LÍNEA 4: Descripción Profesional -->
-    <text x="30" y="174" class="bio-line1">Tecnólogo en Desarrollo de Software</text>
-    <text x="30" y="198" class="bio-line2">Arquitectura Empresarial &amp; Soluciones Escalables</text>
-
-    <line x1="30" y1="216" x2="645" y2="216" stroke="url(#neonTextGrad)" stroke-width="1.2" stroke-opacity="0.6"/>
-
-    <!-- ================= 11. BADGES NEÓN DE TECNOLOGÍAS ================= -->
-    <g transform="translate(30, 235)">
-      <!-- FastAPI -->
-      <g transform="translate(0, 0)">
-        <rect width="80" height="26" rx="4" fill="#071b26" stroke="#00ffff" stroke-width="1.2"/>
-        <circle cx="11" cy="13" r="3.5" fill="#00ffff"/>
-        <text x="22" y="17" class="badge-label" fill="#00ffff">FastAPI</text>
-      </g>
-
-      <!-- Vue 3 -->
-      <g transform="translate(88, 0)">
-        <rect width="70" height="26" rx="4" fill="#06231d" stroke="#10b981" stroke-width="1.2"/>
-        <circle cx="11" cy="13" r="3.5" fill="#10b981"/>
-        <text x="22" y="17" class="badge-label" fill="#34d399">Vue 3</text>
-      </g>
-
-      <!-- PrimeVue -->
-      <g transform="translate(166, 0)">
-        <rect width="88" height="26" rx="4" fill="#06231d" stroke="#2dd4bf" stroke-width="1.2"/>
-        <circle cx="11" cy="13" r="3.5" fill="#2dd4bf"/>
-        <text x="22" y="17" class="badge-label" fill="#2dd4bf">PrimeVue</text>
-      </g>
-
-      <!-- SQLAlchemy -->
-      <g transform="translate(262, 0)">
-        <rect width="105" height="26" rx="4" fill="#260d19" stroke="#f43f5e" stroke-width="1.2"/>
-        <circle cx="11" cy="13" r="3.5" fill="#f43f5e"/>
-        <text x="22" y="17" class="badge-label" fill="#fb7185">SQLAlchemy</text>
-      </g>
-
-      <!-- MariaDB -->
-      <g transform="translate(375, 0)">
-        <rect width="84" height="26" rx="4" fill="#241304" stroke="#f59e0b" stroke-width="1.2"/>
-        <circle cx="11" cy="13" r="3.5" fill="#f59e0b"/>
-        <text x="22" y="17" class="badge-label" fill="#fbbf24">MariaDB</text>
-      </g>
-
-      <!-- MySQL -->
-      <g transform="translate(467, 0)">
-        <rect width="72" height="26" rx="4" fill="#0a192f" stroke="#38bdf8" stroke-width="1.2"/>
-        <circle cx="11" cy="13" r="3.5" fill="#38bdf8"/>
-        <text x="22" y="17" class="badge-label" fill="#38bdf8">MySQL</text>
-      </g>
-
-      <!-- Docker -->
-      <g transform="translate(547, 0)">
-        <rect width="75" height="26" rx="4" fill="#08182b" stroke="#0ea5e9" stroke-width="1.2"/>
-        <circle cx="11" cy="13" r="3.5" fill="#0ea5e9"/>
-        <text x="22" y="17" class="badge-label" fill="#38bdf8">Docker</text>
-      </g>
-    </g>
-
-    <g transform="translate(30, 280)">
-      <text x="0" y="12" font-family="'Fira Code', monospace" font-size="10" fill="#94a3b8" letter-spacing="1">
-        STACK: <tspan fill="#00ffff">ASYNC_BACKEND</tspan> // <tspan fill="#ff00ff">REACTIVE_UI</tspan> // <tspan fill="#facc15">MULTI_DATABASE</tspan>
+    <!-- 3. ROL PRINCIPAL: > FULL STACK DEVELOPER █ -->
+    <g transform="translate(0, 114)">
+      <text x="0" y="0" class="role-text">
+        <tspan class="role-magenta">&gt; FULL STACK DEVELOPER</tspan>
+        <tspan class="role-cursor anim-cursor"> █</tspan>
       </text>
     </g>
+
+    <!-- 4. SUBTÍTULOS PROFESIONALES -->
+    <g transform="translate(0, 142)">
+      <text x="0" y="0" class="bio-line">Tecnólogo en Desarrollo de Software</text>
+      <text x="0" y="22" class="bio-line" fill="#cbd5e1">Arquitectura Empresarial &amp; Soluciones Escalables</text>
+    </g>
+
+    <!-- 5. LÍNEA DIVISORIA RETRO CON DETALLES PIXELADOS -->
+    <g transform="translate(0, 178)">
+      <line x1="0" y1="0" x2="400" y2="0" stroke="#00ffff" stroke-width="1.8" filter="url(#glow-cyan)"/>
+      <rect x="0" y="-3" width="10" height="6" fill="#00ffff"/>
+      <rect x="80" y="-2" width="6" height="4" fill="#ff00ff"/>
+      <rect x="180" y="-2" width="14" height="4" fill="#00ffff"/>
+      <rect x="390" y="-3" width="10" height="6" fill="#00ffff"/>
+    </g>
+
+    <!-- 6. BADGES NEÓN DE TECNOLOGÍAS (IDÉNTICOS AL MOCKUP) -->
+    <!-- Fila 1: FastAPI, Vue 3, PrimeVue, SQLAlchemy, MariaDB -->
+    <g transform="translate(0, 196)">
+      <!-- Badge: FastAPI -->
+      <g transform="translate(0, 0)">
+        <rect width="90" height="30" rx="8" fill="#06121f" fill-opacity="0.9" stroke="#00ffff" stroke-width="1.3" filter="url(#glow-soft)"/>
+        <!-- Icono Rayo ⚡ -->
+        <path d="M14,8 L9,17 L14,17 L11,23 L19,13 L14,13 Z" fill="#00ffff"/>
+        <text x="24" y="20" class="badge-txt">FastAPI</text>
+      </g>
+
+      <!-- Badge: Vue 3 -->
+      <g transform="translate(98, 0)">
+        <rect width="84" height="30" rx="8" fill="#051713" fill-opacity="0.9" stroke="#10b981" stroke-width="1.3"/>
+        <!-- Icono V Vue 3 -->
+        <path d="M12,9 L16,16 L20,9 L17.5,9 L16,12 L14.5,9 Z" fill="#10b981"/>
+        <path d="M10,9 L16,19 L22,9 L19,9 L16,14.5 L13,9 Z" fill="#34d399"/>
+        <text x="26" y="20" class="badge-txt">Vue 3</text>
+      </g>
+
+      <!-- Badge: PrimeVue -->
+      <g transform="translate(190, 0)">
+        <rect width="104" height="30" rx="8" fill="#05151c" fill-opacity="0.9" stroke="#2dd4bf" stroke-width="1.3"/>
+        <!-- Icono P PrimeVue -->
+        <rect x="10" y="8" width="14" height="14" rx="3" fill="#0ea5e9"/>
+        <text x="14.5" y="19" font-family="sans-serif" font-weight="900" font-size="10.5" fill="#ffffff">P</text>
+        <text x="29" y="20" class="badge-txt">PrimeVue</text>
+      </g>
+
+      <!-- Badge: SQLAlchemy -->
+      <g transform="translate(302, 0)">
+        <rect width="118" height="30" rx="8" fill="#1c0714" fill-opacity="0.9" stroke="#f43f5e" stroke-width="1.3"/>
+        <!-- Icono Base de Datos / Cilíndrico -->
+        <ellipse cx="16" cy="11" rx="5" ry="2.2" fill="#f43f5e"/>
+        <path d="M11,11 L11,19 C11,20.5 13.5,21.5 16,21.5 C18.5,21.5 21,20.5 21,19 L21,11 Z" fill="#f43f5e" opacity="0.8"/>
+        <text x="26" y="20" class="badge-txt">SQLAlchemy</text>
+      </g>
+
+      <!-- Badge: MariaDB -->
+      <g transform="translate(428, 0)">
+        <rect width="98" height="30" rx="8" fill="#170c04" fill-opacity="0.9" stroke="#f59e0b" stroke-width="1.3"/>
+        <!-- Icono León Marino / Foca estilizada -->
+        <path d="M12,19 C12,13 16,10 19,10 C18,12 18,15 16,17 C18,18 20,18 20,20 Z" fill="#f59e0b"/>
+        <text x="25" y="20" class="badge-txt">MariaDB</text>
+      </g>
+    </g>
+
+    <!-- Fila 2: MySQL, Docker -->
+    <g transform="translate(0, 234)">
+      <!-- Badge: MySQL -->
+      <g transform="translate(0, 0)">
+        <rect width="86" height="30" rx="8" fill="#071524" fill-opacity="0.9" stroke="#38bdf8" stroke-width="1.3"/>
+        <!-- Icono Delfín -->
+        <path d="M11,18 C13,12 18,10 20,13 C18,14 17,17 14,19 Z" fill="#38bdf8"/>
+        <text x="24" y="20" class="badge-txt">MySQL</text>
+      </g>
+
+      <!-- Badge: Docker -->
+      <g transform="translate(94, 0)">
+        <rect width="92" height="30" rx="8" fill="#041424" fill-opacity="0.9" stroke="#0ea5e9" stroke-width="1.3"/>
+        <!-- Icono Ballena Docker -->
+        <path d="M10,16 H12 V14 H10 V16 Z M13,16 H15 V14 H13 V16 Z M16,16 H18 V14 H16 V16 Z M13,13 H15 V11 H13 V13 Z M8,17 C9,20 13,21 19,20 C21,19 22,17 22,17 C21,17 19,17 18,16 H8 Z" fill="#38bdf8"/>
+        <text x="27" y="20" class="badge-txt">Docker</text>
+      </g>
+    </g>
   </g>
 
-  <!-- Borde Neón Perimetral -->
-  <rect x="1" y="1" width="1598" height="398" fill="none" stroke="#ff00ff" stroke-width="1.5" stroke-opacity="0.3"/>
+  <!-- ================= 11. MARCO PERIMETRAL NEÓN HUD ================= -->
+  <!-- Borde exterior redondeado con esquinas neón cyan y magenta -->
+  <rect x="2" y="2" width="1596" height="396" rx="20" fill="none" stroke="#00ffff" stroke-width="1.6" opacity="0.4"/>
+  <rect x="6" y="6" width="1588" height="388" rx="18" fill="none" stroke="#ff00ff" stroke-width="0.8" opacity="0.25"/>
+
+  <!-- Acentos en las 4 Esquinas Estilo Cyberpunk -->
+  <path d="M 4 35 L 4 20 Q 4 4 20 4 L 35 4" fill="none" stroke="#00ffff" stroke-width="3" filter="url(#glow-soft)"/>
+  <path d="M 1596 35 L 1596 20 Q 1596 4 1580 4 L 1565 4" fill="none" stroke="#ff00ff" stroke-width="3" filter="url(#glow-soft)"/>
+  <path d="M 4 365 L 4 380 Q 4 396 20 396 L 35 396" fill="none" stroke="#00ffff" stroke-width="3" filter="url(#glow-soft)"/>
+  <path d="M 1596 365 L 1596 380 Q 1596 396 1580 396 L 1565 396" fill="none" stroke="#ff00ff" stroke-width="3" filter="url(#glow-soft)"/>
 </svg>
