@@ -50,21 +50,21 @@
     .terminal-chip {
       font-family: 'Fira Code', 'Courier New', monospace;
       font-weight: 700;
-      font-size: 13px;
+      font-size: 20px;
       fill: #00ffff;
       letter-spacing: 2px;
     }
     .title-name {
       font-family: 'Courier New', 'Lucida Console', 'Press Start 2P', monospace;
       font-weight: 900;
-      font-size: 58px;
+      font-size: 60px;
       fill: #ffffff;
       letter-spacing: 2.5px;
     }
     .role-title {
       font-family: 'Fira Code', 'Courier New', monospace;
       font-weight: 800;
-      font-size: 26px;
+      font-size: 30px;
       letter-spacing: 1.5px;
     }
     .role-magenta { fill: #ff1493; }
@@ -72,21 +72,21 @@
     .bio-line-1 {
       font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
       font-weight: 600;
-      font-size: 18px;
+      font-size: 20px;
       fill: #f8fafc;
       letter-spacing: 0.4px;
     }
     .bio-line-2 {
       font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
       font-weight: 500;
-      font-size: 16px;
+      font-size: 15px;
       fill: #cbd5e1;
       letter-spacing: 0.3px;
     }
     .badge-text {
       font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
       font-weight: 700;
-      font-size: 13px;
+      font-size: 15px;
       fill: #ffffff;
       letter-spacing: 0.3px;
     }
@@ -161,15 +161,6 @@
   <!-- ================= 3. INFORMACIÓN PROFESIONAL GIOVANNY PEÑALOZA ================= -->
   <g transform="translate(80, 55)">
     
-    <!-- A. BADGE STATUS TERMINAL -->
-    <g transform="translate(0, 0)">
-      <rect width="345" height="34" rx="17" fill="#030915" fill-opacity="0.9" stroke="#00ffff" stroke-width="1.5" filter="url(#glow-soft)"/>
-      <circle cx="18" cy="17" r="5" fill="#00ffff" class="star-1"/>
-      <circle cx="18" cy="17" r="8" fill="none" stroke="#00ffff" stroke-width="1" opacity="0.6"/>
-      <text x="36" y="22" class="terminal-chip">SYSTEM ONLINE // READY TO DEPLOY</text>
-      <rect x="322" y="10" width="7" height="14" fill="#00ffff" opacity="0.8"/>
-    </g>
-
     <!-- B. NOMBRE PRINCIPAL DE IMPACTO (TAMAÑO MAXIMIZADO) -->
     <g transform="translate(0, 72)">
       <text x="3" y="3" class="title-name" fill="#00ffff" opacity="0.75" filter="url(#glow-cyan)">GIOVANNY PEÑALOZA</text>
@@ -289,11 +280,20 @@
 
     <!-- INDICADOR SUBYACENTE DE INFRAESTRUCTURA -->
     <g transform="translate(0, 312)">
-      <text x="0" y="12" font-family="'Fira Code', monospace" font-size="11" fill="#94a3b8" letter-spacing="1.5">
+      <text x="0" y="12" font-family="'Fira Code', monospace" font-size="15" fill="#94a3b8" letter-spacing="1.5">
         ARCHITECTURE: <tspan fill="#00ffff">ASYNC_REST_APIS</tspan> // <tspan fill="#ff00ff">REACTIVE_SPA</tspan> // <tspan fill="#facc15">MULTI_DB_POOLING</tspan>
       </text>
     </g>
   </g>
+
+      <!-- A. BADGE STATUS TERMINAL -->
+    <g transform="translate(90, 400)">
+      <rect width="510" height="30" rx="17" fill="#030915" fill-opacity="0.9" stroke="#00ffff" stroke-width="1.5" filter="url(#glow-soft)"/>
+      <circle cx="18" cy="17" r="5" fill="#00ffff" class="star-1"/>
+      <circle cx="18" cy="17" r="8" fill="none" stroke="#00ffff" stroke-width="1" opacity="0.6"/>
+      <text x="36" y="22" class="terminal-chip">SYSTEM ONLINE // READY TO DEPLOY</text>
+      <rect x="322" y="10" width="7" height="14" fill="#00ffff" opacity="0.8"/>
+    </g>
 
   <!-- ================= 5. PÉTALOS DE SAKURA ANIMADOS EN PRIMER PLANO ================= -->
   <g id="fg-petals">
