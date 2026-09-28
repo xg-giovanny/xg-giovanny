@@ -3,28 +3,15 @@
   Junior Full-Stack Engineer & Software Architect
   Usuario: xg-giovanny | Giovanny Peñaloza
 =================================================================== -->
-
-<div align="center">
-  <img src="profile.svg" alt="Banner Profesional Giovanny Peñaloza" width="100%" />
-</div>
-
 <div align="center">
 
   [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3500&pause=1000&color=38BDF8&center=true&vCenter=true&multiline=true&repeat=true&width=750&height=80&lines=Full-Stack+Engineer+%7C+Vue.js+3+%E2%80%A2+FastAPI+%E2%80%A2+Node.js;Arquitectura+de+Sistemas+Empresariales+de+Misi%C3%B3n+Cr%C3%ADtica;APIs+RESTful+Escalables+(%2B600+Endpoints)+%E2%80%A2+Multi-DB+Pooling;Seguridad+Avanzada+(AES-128+%2B+RBAC)+%E2%80%A2+Geoespacial+%26+Real-Time)](https://git.io/typing-svg)
 
 </div>
 
-<p align="center">
-  <a href="mailto:giovanny.penaloza.romero@gmail.com">
-    <img src="https://img.shields.io/badge/Email-giovanny.penaloza.romero%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Badge" />
-  </a>
-  <a href="https://linkedin.com/in/giovanny-penaloza">
-    <img src="https://img.shields.io/badge/LinkedIn-Giovanny_Peñaloza-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge" />
-  </a>
-  <a href="https://github.com/xg-giovanny">
-    <img src="https://img.shields.io/badge/GitHub-xg--giovanny-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Badge" />
-  </a>
-</p>
+<div align="center">
+  <img src="profile.svg" alt="Banner Profesional Giovanny Peñaloza" width="100%" />
+</div>
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=xg-giovanny&style=for-the-badge&color=0284c7" alt="Profile Views" />
@@ -155,15 +142,14 @@ principios: Código limpio, seguridad por diseño, cero redundancia de datos y a
 - **Implementé sistemas de control de acceso basado en roles (RBAC)** con políticas granulares a nivel de módulo, submódulo y acción (Read/Write/Update/Delete) mediante CASL y middlewares de seguridad.
 - **Desarrollé esquemas de seguridad criptográfica de doble capa** integrando encriptación simétrica AES-128 con padding PKCS7 y validación de integridad HMAC-SHA1 para datos altamente sensibles.
 - **Arquitecté un mecanismo de control de sesión única en tiempo real**, utilizando Server-Sent Events (SSE) y fingerprinting para invalidar sesiones concurrentes no autorizadas y bloquear intentos sospechosos.
-- **Gestioné entornos multi-base de datos simultáneos en MariaDB y MySQL**, implementando connection pooling con monitor de conectividad (`pool_pre_ping`), reconexión automática y tolerancia a fallos.
-- **Construí componentes de interfaz gráfica reutilizables de alta complejidad** en Vue 3 (`componentTablaGeneral`, `baseTableGeneralComponent`), unificando tablas maestras con edición inline, filtros dinámicos y paginación masiva.
+- **Gestioné entornos multi-base de datos simultáneos en MariaDB y MySQL**, implementando connection pooling con monitor de conectividad ,reconexión automática y tolerancia a fallos.
+- **Construí componentes de interfaz gráfica reutilizables de alta complejidad** en Vue 3 , unificando tablas maestras con edición inline, filtros dinámicos y paginación masiva.
 - **Diseñé módulos de gestión geoespacial con Leaflet**, permitiendo visualización en tiempo real de cientos de órdenes de trabajo, cálculo de rutas operativas y traslados masivos entre unidades móviles.
 - **Desarrollé el módulo integral de gestión logística e inventarios**, abarcando flujos transaccionales de asignación, devolución, conciliación de stock de bodega/móviles y cálculo automatizado de volumen y cubicaje.
-- **Integré servicios de visión artificial y biometría ligera en el navegador**, aplicando OCR con Tesseract.js para digitalización de documentos y reconocimiento facial con face-api.js.
 - **Implementé motores de generación automatizada de documentos oficiales en PDF** (actas de entrega, órdenes técnicas, reportes ARO/PTA) mediante jsPDF y pdfmake con firmas digitales interactivas vectoriales.
 - **Automaticé la exportación e importación masiva de datos en Excel** (xlsx-js-style), incorporando estilos corporativos, procesamiento batch y validaciones estrictas de consistencia estructural.
 - **Contenericé aplicaciones completas mediante Docker y Docker Compose**, configurando redes bridge aisladas, imágenes optimizadas Alpine/Bookworm y gestión de ambientes desacoplados (DEV, TRAINING, PROD).
-- **Diseñé composables reactivos y guardas globales contra peticiones duplicadas** (`useSubmitButton`), implementando bloqueos sincrónicos temporales que protegen transacciones críticas de doble clic.
+- **Diseñé composables reactivos y guardas globales contra peticiones duplicadas** , implementando bloqueos sincrónicos temporales que protegen transacciones críticas de doble clic.
 - **Construí módulos analíticos con dashboards interactivos** utilizando Chart.js y ApexCharts con filtros multidimensionales por fechas, supervisores y estados operacionales.
 - **Integré soluciones de almacenamiento cloud privado (Nextcloud)** consumiendo la API WebDAV y OCS para la custodia centralizada y generación segura de enlaces de descarga compartidos.
 - **Automaticé tareas programadas en background** con cron jobs y node-cron para auditorías periódicas, envíos masivos de notificaciones por email HTML y actualización de restricciones operativas.
@@ -192,7 +178,7 @@ principios: Código limpio, seguridad por diseño, cero redundancia de datos y a
 ### 🏢 Sistema Integrado de Gestión Empresarial (ERP)
 > *Plataforma web empresarial para la administración centralizada de operaciones, flota y auditoría.*
 - **Arquitectura:** Vue 3 (PrimeVue) + FastAPI (Python 3.12) + MariaDB (Multi-DB) + Docker.
-- **Aspectos Destacados:** Módulos de parque automotor, trazabilidad logística, gestión de capacidades operativas, encriptación AES-128, sincronización con Nextcloud y reportería en Excel/PDF con firma digital.
+- **Aspectos Destacados:** Módulos de parque automotor, trazabilidad logística, gestión de capacidades operativas, sincronización con Nextcloud y reportería en Excel/PDF con firma digital.
 
 ### ⚡ Sistema de Gestión de Órdenes y Logística de Campo
 > *Aplicación de misión crítica para el sector energético e industrial con alta concurrencia operativa.*
