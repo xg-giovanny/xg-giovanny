@@ -5,8 +5,6 @@
 =================================================================== -->
 <div align="center">
 
-  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3500&pause=1000&color=38BDF8&center=true&vCenter=true&multiline=true&repeat=true&width=750&height=80&lines=Full-Stack+Engineer+%7C+Vue.js+3+%E2%80%A2+FastAPI+%E2%80%A2+Node.js;Arquitectura+de+Sistemas+Empresariales+de+Misi%C3%B3n+Cr%C3%ADtica;APIs+RESTful+Escalables+(%2B600+Endpoints)+%E2%80%A2+Multi-DB+Pooling;Seguridad+Avanzada+(AES-128+%2B+RBAC)+%E2%80%A2+Geoespacial+%26+Real-Time)](https://git.io/typing-svg)
-
 </div>
 
 <div align="center">
@@ -36,7 +34,7 @@ núcleo_tecnológico: Vue.js 3 (Composition API) | FastAPI (Python) | Node.js (E
 principios: Código limpio, seguridad por diseño, cero redundancia de datos y alto rendimiento
 ```
 
-- 🌐 **Desarrollo Full-Stack Extremo:** Capacidad demostrada para diseñar, estructurar y desplegar sistemas completos de punta a punta, coordinando capas desacopladas frontend, backend, base de datos y contenedores.
+- 🌐 **Desarrollo Full-Stack :** Capacidad demostrada para diseñar, estructurar y desplegar sistemas completos de punta a punta, coordinando capas desacopladas frontend, backend, base de datos y contenedores.
 - ⚡ **Diseño e Integración de APIs:** Construcción de arquitecturas RESTful masivas (+600 endpoints) documentadas con OpenAPI/Swagger, middleware de protección contra concurrencia y streaming de eventos en tiempo real con **Server-Sent Events (SSE)**.
 - 🗄️ **Bases de Datos & Persistencia Compleja:** Modelado relacional normalizado (40+ tablas por sistema), gestión concurrente de **múltiples bases de datos simultáneas**, connection pooling con recuperación automática ante caídas y optimización de consultas SQL analíticas de alto volumen.
 - 🔐 **Seguridad & Gobernanza de Acceso:** Implementación de encriptación simétrica **AES-128 de doble capa**, HMAC-SHA1, hashing seguro con bcrypt, control de acceso basado en roles (**RBAC con CASL** y permisos granulares RWUD), y control estricto de **sesión única por dispositivo**.
